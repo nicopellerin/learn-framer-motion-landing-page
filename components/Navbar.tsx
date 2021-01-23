@@ -32,14 +32,13 @@ const Navbar = () => {
                   {index === i && (
                     <motion.div
                       layoutId="menuItem"
-                      initial={{ y: -1, opacity: 0.5 }}
-                      animate={{ y: 0, opacity: 1 }}
                       style={{
                         position: 'absolute',
                         width: '100%',
-                        height: 3,
+                        height: '0.3rem',
                         background: '#F6DEFF',
-                        bottom: '-1rem',
+                        bottom: '-1.2rem',
+                        borderRadius: '0.5rem',
                       }}
                     />
                   )}
@@ -79,6 +78,7 @@ const MenuList = styled.ul`
   display: flex;
   align-items: center;
   position: relative;
+  padding: 1rem 0;
 `
 
 const MenuListItem = styled.li`

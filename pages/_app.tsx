@@ -1,5 +1,6 @@
 import React from 'react'
 import { RecoilRoot } from 'recoil'
+import Head from 'next/head'
 
 import 'typeface-inter'
 import '@fontsource/space-grotesk/700.css'
@@ -13,10 +14,18 @@ interface Props {
 
 const MyApp = ({ Component, pageProps }: Props) => {
   return (
-    <RecoilRoot>
-      <Component {...pageProps} />
-      <GlobalStyles />
-    </RecoilRoot>
+    <>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
+      </Head>
+      <RecoilRoot>
+        <Component {...pageProps} />
+        <GlobalStyles />
+      </RecoilRoot>
+    </>
   )
 }
 

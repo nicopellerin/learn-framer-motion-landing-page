@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 import { AnimatePresence, motion } from 'framer-motion'
-import { clearTimeout } from 'timers'
+import LoopLogo from './LoopLogo'
 
 const HeroBackground = () => {
   const [show, setShow] = useState(false)
@@ -23,24 +23,7 @@ const HeroBackground = () => {
         alt="Background"
       />
       <Info>
-        <LogoWrapper>
-          <Loop
-            src="/images/loop.png"
-            initial={{ y: '-50%', x: '-50%' }}
-            alt="Loop"
-          />
-          <Logo
-            src="/images/react-logo.svg"
-            width={250}
-            height={250}
-            animate={{ y: [0, 3, 0], rotate: [3, 0, -3] }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              repeatType: 'reverse',
-            }}
-          />
-        </LogoWrapper>
+        <LoopLogo />
         <Title
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -83,9 +66,9 @@ const HeroBackground = () => {
         <AnimatePresence>
           {buttonLoaded && show && (
             <SavingsWrapper
-              initial={{ y: -30 }}
-              animate={{ y: 0 }}
-              exit={{ y: -35 }}
+              initial={{ y: -30, rotateX: 145 }}
+              animate={{ y: 0, rotateX: 0 }}
+              exit={{ y: -35, rotateX: 90 }}
               transition={{ type: 'spring', damping: 20 }}
             >
               <Savings>Save 40%</Savings>
@@ -142,20 +125,6 @@ const Tagline = styled(motion.h2)`
   font-family: 'Inter';
 `
 
-const LogoWrapper = styled.div`
-  position: relative;
-  margin-bottom: 3rem;
-`
-
-const Loop = styled(motion.img)`
-  position: absolute;
-  top: 40%;
-  left: 75%;
-  width: 50rem;
-  height: 50rem;
-  z-index: 3;
-`
-
 const Button = styled(motion.button)`
   border: none;
   padding: 1.4rem 2rem;
@@ -169,8 +138,6 @@ const Button = styled(motion.button)`
   z-index: 30;
   box-shadow: 0 0 10px 5px rgba(89, 86, 213, 0.5);
 `
-
-const Logo = styled(motion.img)``
 
 const SavingsWrapper = styled(motion.div)`
   position: relative;

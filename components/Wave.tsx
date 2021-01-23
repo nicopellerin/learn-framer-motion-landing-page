@@ -8,7 +8,7 @@ const Wave = () => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 225"
       preserveAspectRatio="xMinYMin slice"
-      initial={{ y: 230 }}
+      initial={{ y: 250 }}
       animate={{ y: 0 }}
       transition={{ type: 'spring', damping: 18, stiffness: 50 }}
     >
