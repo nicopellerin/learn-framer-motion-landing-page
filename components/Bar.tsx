@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const Bar = () => {
   return (
@@ -19,7 +20,11 @@ const Bar = () => {
           repeatType: 'reverse',
         }}
       >
-        <Text>Learn more</Text>
+        <Link href="#what-you-will-learn">
+          <a>
+            <Text>Learn more</Text>
+          </a>
+        </Link>
         <Line />
       </Wrapper>
     </motion.span>
@@ -42,7 +47,7 @@ const Wrapper = styled(motion.div)`
 
 const Text = styled(motion.span)`
   color: #e39aff;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
   background: rgba(255, 255, 255, 0.03);
