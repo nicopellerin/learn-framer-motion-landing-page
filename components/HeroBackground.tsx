@@ -93,20 +93,26 @@ const Wrapper = styled.div`
 `
 
 const Info = styled(motion.div)`
+  padding: 0 3rem;
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 42%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+
+  @media (min-width: 600px) {
+    padding: 0;
+    top: 42%;
+  }
 `
 
 const Title = styled(motion.h1)`
-  font-size: 8rem;
+  font-size: 7.2rem;
   background: -webkit-linear-gradient(45deg, #e39aff 1%, #61dafb 123.31%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -114,15 +120,25 @@ const Title = styled(motion.h1)`
   whitespace: no-wrap;
   font-family: 'Space Grotesk';
   font-weight: 700;
+  line-height: 1.1;
+
+  @media (min-width: 600px) {
+    font-size: 8rem;
+  }
 `
 
 const Tagline = styled(motion.h2)`
-  font-size: 3rem;
+  font-size: 2.6rem;
   color: rgba(244, 244, 244, 0.9);
   font-weight: 500;
   letter-spacing: 1.1px;
   margin-bottom: 6rem;
   font-family: 'Inter';
+  line-height: 1.3;
+
+  @media (min-width: 600px) {
+    font-size: 3rem;
+  }
 `
 
 const Button = styled(motion.button)`

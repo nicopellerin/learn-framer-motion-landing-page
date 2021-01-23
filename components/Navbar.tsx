@@ -32,6 +32,8 @@ const Navbar = () => {
                   {index === i && (
                     <motion.div
                       layoutId="menuItem"
+                      initial={{ y: 1 }}
+                      animate={{ y: 0 }}
                       style={{
                         position: 'absolute',
                         width: '100%',
@@ -65,6 +67,10 @@ const Wrapper = styled.div`
   width: 100%;
   z-index: 1;
   padding: 3rem 6rem;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `
 
 const Menu = styled.nav`

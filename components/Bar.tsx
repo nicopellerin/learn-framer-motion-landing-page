@@ -48,7 +48,6 @@ const Wrapper = styled(motion.div)`
 const Text = styled(motion.span)`
   color: #e39aff;
   font-size: 1.6rem;
-  margin-bottom: 0.5rem;
   font-weight: 600;
   background: rgba(255, 255, 255, 0.03);
   padding: 0.3rem 0.5rem;
@@ -59,4 +58,5 @@ const Line = styled(motion.div)`
   width: 2px;
   height: 4rem;
   background: rgba(97, 218, 251, 0.7);
+  margin-top: 0.8rem;
 `
