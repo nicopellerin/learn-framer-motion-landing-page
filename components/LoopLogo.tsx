@@ -34,7 +34,9 @@ const LogoWrapper = styled.div`
 `
 
 const Logo = styled(motion.img)`
+  position: relative;
   width: 20rem;
+  z-index: 4;
 
   @media (min-width: 1024px) {
     width: auto;

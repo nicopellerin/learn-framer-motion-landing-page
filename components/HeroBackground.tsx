@@ -162,6 +162,7 @@ const Title = styled(motion.h1)`
   font-size: 7.2rem;
   background: -webkit-linear-gradient(45deg, #e39aff 1%, #61dafb 123.31%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 3.2rem;
   font-family: 'Space Grotesk';
@@ -176,7 +177,11 @@ const Title = styled(motion.h1)`
 
 const Tagline = styled(motion.h2)`
   font-size: 2.6rem;
-  color: rgba(244, 244, 244, 0.9);
+  /* color: rgba(244, 244, 244, 0.9); */
+  background: -webkit-linear-gradient(45deg, #f1f1f1 1%, #f6deff 123.31%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 500;
   letter-spacing: 1.1px;
   margin-bottom: 4rem;
@@ -201,10 +206,9 @@ const Button = styled(motion.button)`
   cursor: pointer;
   position: relative;
   z-index: 30;
-  box-shadow: 0 0 10px 5px rgba(89, 86, 213, 0.5);
+  box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.5);
 
   @media (min-width: 1024px) {
-    margin-top: 5rem;
     font-size: 2.4rem;
   }
 `
@@ -218,7 +222,7 @@ const SavingsWrapper = styled(motion.div)`
 `
 
 const Savings = styled(motion.span)`
-  background: rgba(244, 244, 244, 0.8);
+  background: rgba(244, 244, 244, 1);
   position: absolute;
   width: 100%;
   font-size: 1.6rem;
