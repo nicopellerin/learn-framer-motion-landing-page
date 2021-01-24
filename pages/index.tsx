@@ -12,7 +12,10 @@ const IndexPage = () => {
     <>
       <Navbar />
       <NavbarMobile setToggleDropdown={setToggleDropdown} />
-      <HeroBackground />
+      <HeroBackground
+        toggleDropdown={toggleDropdown}
+        setToggleDropdown={setToggleDropdown}
+      />
       <Wave />
       <Bar />
     </>

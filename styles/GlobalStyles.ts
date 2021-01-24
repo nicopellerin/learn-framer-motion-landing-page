@@ -16,9 +16,12 @@ const GlobalStyles = createGlobalStyle`
   --successColor: #69f0ae;
 
   --systemFont: "Inter", sans-serif;
-  
-  --mainLayoutLeftColumn: 3fr;
-  --mainLayoutRightColumn: 1.1fr;
+}
+
+@media (min-width: 500px) {
+  :root {
+    --mobileWidth: 500px;
+  }
 }
 
 

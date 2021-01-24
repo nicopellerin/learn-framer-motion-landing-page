@@ -41,9 +41,9 @@ export default NavbarMobile
 const Wrapper = styled.div`
   position: absolute;
   width: 100%;
-  z-index: 300;
+  z-index: 100;
 
-  @media (min-width: 600px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 `

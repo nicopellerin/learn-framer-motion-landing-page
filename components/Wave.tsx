@@ -28,4 +28,6 @@ const Wrapper = styled(motion.svg)`
   position: fixed;
   left: 0;
   bottom: 0;
+  z-index: 101;
+  pointer-events: none;
 `

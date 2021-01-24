@@ -1,11 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Dispatch, SetStateAction, FC } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 import { AnimatePresence, motion } from 'framer-motion'
-import LoopLogo from './LoopLogo'
+import { FaTv } from 'react-icons/fa'
 
-const HeroBackground = () => {
+import LoopLogo from './LoopLogo'
+import DropdownMobile from './DropdownMobile'
+import Overlay from './Overlay'
+import VideoPlayer from './VideoPlayer'
+
+interface Props {
+  toggleDropdown: boolean
+  setToggleDropdown: Dispatch<SetStateAction<boolean>>
+}
+
+const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
   const [show, setShow] = useState(false)
+  const [showVideoPlayer, setShowVideoPlayer] = useState(false)
   const [buttonLoaded, setButtonLoaded] = useState(false)
 
   useEffect(() => {
@@ -14,69 +25,105 @@ const HeroBackground = () => {
   }, [])
 
   return (
-    <Wrapper>
-      <Image
-        src="/images/bg.png"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-        alt="Background"
-      />
-      <Info>
-        <LoopLogo />
-        <Title
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: 'spring', damping: 18, stiffness: 60 }}
-        >
-          Step your animation game up
-        </Title>
-        <Tagline
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            type: 'spring',
-            damping: 18,
-            stiffness: 60,
-            delay: 0.2,
-          }}
-        >
-          Learn Framer Motion - from beginner to advanced
-        </Tagline>
-        <Button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            type: 'spring',
-            damping: 18,
-            stiffness: 60,
-            delay: 0.5,
-          }}
-          onMouseOver={() => setShow(true)}
-          onMouseOut={() => setShow(false)}
-        >
-          Pre-order &mdash; 19.99${' '}
-          <span style={{ textDecoration: 'line-through', color: 'crimson' }}>
-            49.99$
-          </span>
-        </Button>
-        <AnimatePresence>
-          {buttonLoaded && show && (
-            <SavingsWrapper
-              initial={{ y: -30, rotateX: 145 }}
-              animate={{ y: 0, rotateX: 0 }}
-              exit={{ y: -35, rotateX: 90 }}
-              transition={{ type: 'spring', damping: 20 }}
-            >
-              <Savings>Save 40%</Savings>
-            </SavingsWrapper>
-          )}
-        </AnimatePresence>
-      </Info>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Image
+          src="/images/bg.png"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          alt="Background"
+        />
+        <Info>
+          <LoopLogo />
+          <Title
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: 'spring', damping: 18, stiffness: 60 }}
+          >
+            Step your animation game up
+          </Title>
+          <Tagline
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              type: 'spring',
+              damping: 18,
+              stiffness: 60,
+              delay: 0.2,
+            }}
+          >
+            Learn Framer Motion - from beginner to advanced
+          </Tagline>
+          <Button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              type: 'spring',
+              damping: 18,
+              stiffness: 60,
+              delay: 0.5,
+            }}
+            onMouseOver={() => setShow(true)}
+            onMouseOut={() => setShow(false)}
+          >
+            Pre-order &mdash; 19.99${' '}
+            <span style={{ textDecoration: 'line-through', color: 'crimson' }}>
+              49.99$
+            </span>
+          </Button>
+          <AnimatePresence>
+            {buttonLoaded && show && (
+              <SavingsWrapper
+                initial={{ y: -30, rotateX: 145 }}
+                animate={{ y: 0, rotateX: 0 }}
+                exit={{ y: -35, rotateX: 90 }}
+                transition={{ type: 'spring', damping: 20 }}
+              >
+                <Savings>Save 40%</Savings>
+              </SavingsWrapper>
+            )}
+          </AnimatePresence>
+          <WatchVideoButton
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              type: 'spring',
+              damping: 18,
+              stiffness: 60,
+              delay: 1.2,
+            }}
+            onClick={() => setShowVideoPlayer(true)}
+          >
+            <FaTv
+              style={{
+                marginRight: '0.7rem',
+                color: 'rebeccapurple',
+              }}
+            />
+            Watch video
+          </WatchVideoButton>
+        </Info>
+      </Wrapper>
+      <AnimatePresence>
+        {toggleDropdown && (
+          <DropdownMobile setToggleDropdown={setToggleDropdown} />
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {toggleDropdown && <Overlay setToggleDropdown={setToggleDropdown} />}
+      </AnimatePresence>
+      <AnimatePresence>
+        {showVideoPlayer && (
+          <VideoPlayer setShowVideoPlayer={setShowVideoPlayer} />
+        )}
+      </AnimatePresence>
+    </>
   )
 }
 
@@ -105,7 +152,7 @@ const Info = styled(motion.div)`
   transform: translate(-50%, -50%);
   width: 100%;
 
-  @media (min-width: 600px) {
+  @media (min-width: 1100px) {
     padding: 0;
     top: 42%;
   }
@@ -117,12 +164,12 @@ const Title = styled(motion.h1)`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 3.2rem;
-  whitespace: no-wrap;
   font-family: 'Space Grotesk';
   font-weight: 700;
   line-height: 1.1;
+  text-align: center;
 
-  @media (min-width: 600px) {
+  @media (min-width: 1024px) {
     font-size: 8rem;
   }
 `
@@ -132,12 +179,14 @@ const Tagline = styled(motion.h2)`
   color: rgba(244, 244, 244, 0.9);
   font-weight: 500;
   letter-spacing: 1.1px;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   font-family: 'Inter';
   line-height: 1.3;
+  text-align: center;
 
-  @media (min-width: 600px) {
+  @media (min-width: 500px) {
     font-size: 3rem;
+    margin-bottom: 5rem;
   }
 `
 
@@ -167,8 +216,6 @@ const Savings = styled(motion.span)`
   background: rgba(244, 244, 244, 0.8);
   position: absolute;
   width: 100%;
-  zindex: 20;
-  whitespace: nowrap;
   font-size: 1.6rem;
   padding: 0.5rem;
   font-weight: 600;
@@ -176,4 +223,22 @@ const Savings = styled(motion.span)`
   border-bottom-right-radius: 0.5rem;
   color: rebeccapurple;
   box-shadow: 0 0 10px 5px rgba(89, 86, 213, 0.3);
+`
+
+const WatchVideoButton = styled(motion.button)`
+  z-index: 30;
+  margin-top: 4.2rem;
+  border: 2px solid rgba(227, 154, 255, 0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  background: #f6deff;
+  cursor: pointer;
+  color: rebeccapurple;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 1024px) {
+    margin-top: 5rem;
+  }
 `

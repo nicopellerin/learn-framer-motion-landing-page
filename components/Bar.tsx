@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -31,7 +31,7 @@ const Bar = () => {
   )
 }
 
-export default Bar
+export default memo(Bar)
 
 // Styles
 const Wrapper = styled(motion.div)`
