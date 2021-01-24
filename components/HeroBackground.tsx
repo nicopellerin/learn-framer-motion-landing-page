@@ -193,7 +193,7 @@ const Tagline = styled(motion.h2)`
 const Button = styled(motion.button)`
   border: none;
   padding: 1.4rem 2rem;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   border-radius: 0.5rem;
   font-weight: 600;
   background: linear-gradient(95.66deg, #61dafb 30.07%, #bb6bd9 104.98%);
@@ -202,6 +202,11 @@ const Button = styled(motion.button)`
   position: relative;
   z-index: 30;
   box-shadow: 0 0 10px 5px rgba(89, 86, 213, 0.5);
+
+  @media (min-width: 1024px) {
+    margin-top: 5rem;
+    font-size: 2.4rem;
+  }
 `
 
 const SavingsWrapper = styled(motion.div)`

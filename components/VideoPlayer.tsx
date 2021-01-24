@@ -24,9 +24,9 @@ const VideoPlayer: FC<Props> = ({ setShowVideoPlayer }) => {
           transition={{ type: 'spring', damping: 14, delay: 0.2 }}
           onClick={() => setShowVideoPlayer(false)}
         >
-          <Icon role="button" whileHover={{ rotate: 7 }}>
+          <Icon role="button" whileHover={{ rotate: [0, 7, -5, 0] }}>
             <FaTimes
-              style={{ fontSize: '3rem', color: 'rgba(227, 154, 255, 1)' }}
+              style={{ fontSize: '2.4rem', color: 'rgba(227, 154, 255, 1)' }}
             />
           </Icon>
         </CloseWrapper>
@@ -68,8 +68,8 @@ const VideoContainer = styled(motion.div)`
 `
 
 const CloseWrapper = styled(motion.div)`
-  width: 4rem;
-  height: 4rem;
+  width: 3.6rem;
+  height: 3.6rem;
   border-radius: 50%;
   background: #010101;
   position: absolute;
