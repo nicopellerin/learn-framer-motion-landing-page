@@ -43,7 +43,7 @@ const Container = styled.div`
 `
 
 const Title = styled.h2`
-  font-size: 5rem;
+  font-size: 6rem;
   font-family: 'Space Grotesk', sans-serif;
   color: #333;
 `

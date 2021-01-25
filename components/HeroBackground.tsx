@@ -8,6 +8,7 @@ import LoopLogo from './LoopLogo'
 import DropdownMobile from './DropdownMobile'
 import Overlay from './Overlay'
 import VideoPlayer from './VideoPlayer'
+import Link from 'next/link'
 
 interface Props {
   toggleDropdown: boolean
@@ -18,6 +19,7 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
   const [show, setShow] = useState(false)
   const [showVideoPlayer, setShowVideoPlayer] = useState(false)
   const [buttonLoaded, setButtonLoaded] = useState(false)
+  const [showIcons, setShowIcons] = useState(false)
 
   useEffect(() => {
     const idx = window.setTimeout(() => setButtonLoaded(true), 1500)
@@ -115,7 +117,27 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
                 Watch video
               </WatchVideoButton>
             </>
-          ) : null}
+          ) : (
+            <Link href="#sign-up">
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  type: 'spring',
+                  damping: 18,
+                  stiffness: 60,
+                  delay: 0.5,
+                }}
+              >
+                <Button whileHover={{ y: 1 }} whileTap={{ y: -1 }}>
+                  Sign up!
+                </Button>
+              </motion.span>
+            </Link>
+          )}
         </Info>
       </Wrapper>
       <AnimatePresence>
@@ -215,6 +237,7 @@ const Button = styled(motion.button)`
   position: relative;
   z-index: 30;
   box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.5);
+  outline: none;
 
   @media (min-width: 1024px) {
     font-size: 2.4rem;

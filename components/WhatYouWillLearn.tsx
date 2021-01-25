@@ -45,7 +45,7 @@ const WhatYouWillLearn = () => {
           a CSS-in-JS libraries such as <strong>styled-components</strong>.
         </Text>
         <Text>
-          By the way, all the animations on this website are done only using{' '}
+          By the way, all the animations on this website are done using only{' '}
           <strong>Framer Motion</strong>.
         </Text>
         <SignupForm />
@@ -85,7 +85,7 @@ const Container = styled.div`
 `
 
 const Title = styled.h2`
-  font-size: 5rem;
+  font-size: 6rem;
   font-family: 'Space Grotesk', sans-serif;
   color: #333;
 `

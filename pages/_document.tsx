@@ -34,7 +34,6 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-          <title>LearnFramerMotion.com - From beginner to advanced</title>
           <meta
             name="og:title"
             content="LearnFramerMotion.com - From beginner to advanced"
