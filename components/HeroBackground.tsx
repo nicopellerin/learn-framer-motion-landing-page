@@ -19,7 +19,6 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
   const [show, setShow] = useState(false)
   const [showVideoPlayer, setShowVideoPlayer] = useState(false)
   const [buttonLoaded, setButtonLoaded] = useState(false)
-  const [showIcons, setShowIcons] = useState(false)
 
   useEffect(() => {
     const idx = window.setTimeout(() => setButtonLoaded(true), 1500)
@@ -32,7 +31,7 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
     <>
       <Wrapper>
         <Image
-          src="/images/bg.png"
+          src="/images/bg.jpg"
           layout="fill"
           objectFit="cover"
           objectPosition="center"
