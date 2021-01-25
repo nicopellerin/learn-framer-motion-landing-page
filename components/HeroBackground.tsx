@@ -8,7 +8,6 @@ import LoopLogo from './LoopLogo'
 import DropdownMobile from './DropdownMobile'
 import Overlay from './Overlay'
 import VideoPlayer from './VideoPlayer'
-import SignupForm from './SignupForm'
 
 interface Props {
   toggleDropdown: boolean
