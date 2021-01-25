@@ -170,7 +170,7 @@ const Wrapper = styled.div`
 `
 
 const Info = styled(motion.div)`
-  padding: 0 3rem;
+  padding: 0 2rem;
   z-index: 2;
   display: flex;
   flex-direction: column;

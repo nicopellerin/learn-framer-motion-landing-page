@@ -4,7 +4,15 @@ import styled from 'styled-components'
 const Footer = () => (
   <Wrapper>
     <Container>
-      &copy; {new Date().getFullYear()} Nico Pellerin. All rights reserved.
+      &copy; {new Date().getFullYear()}{' '}
+      <a
+        href="https://nicopellerin.io"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Nico Pellerin
+      </a>
+      . All rights reserved.
     </Container>
   </Wrapper>
 )

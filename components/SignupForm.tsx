@@ -85,15 +85,16 @@ const Wrapper = styled(motion.div)`
   padding: 4rem 2rem 5rem;
   background: url('/images/bg.jpg');
   background-size: cover;
-  border-radius: 0.5rem;
-  margin: 6rem 0 4rem;
-  border: 2px solid #f4f4f4;
+  margin: 6rem -2rem 4rem;
   scroll-margin-top: 25em;
   box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.2);
 
-  @media (min-width: 1024px) {
+  @media (min-width: 450px) {
+    border-radius: 0.5rem;
     padding: 5rem 0rem 7rem;
     scroll-margin-top: 40em;
+    border: 2px solid #f4f4f4;
+    margin: 6rem 0rem 4rem;
   }
 `
 
