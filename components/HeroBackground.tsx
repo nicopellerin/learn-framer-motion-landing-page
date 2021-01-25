@@ -131,7 +131,7 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
                   delay: 0.5,
                 }}
               >
-                <Button whileHover={{ y: 1 }} whileTap={{ y: -1 }}>
+                <Button whileHover={{ y: -1 }} whileTap={{ y: 1 }}>
                   Sign up!
                 </Button>
               </motion.span>

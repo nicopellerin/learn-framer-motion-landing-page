@@ -54,7 +54,7 @@ const SignupForm = () => {
           value={email}
           onChange={(e) => setEmail(e.currentTarget.value)}
         />
-        <Button whileHover={{ y: 1 }} whileTap={{ y: -1 }}>
+        <Button whileHover={{ y: -1 }} whileTap={{ y: 1 }}>
           Sign up
         </Button>
         {(errMessage || successMessage) && (
