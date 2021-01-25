@@ -51,7 +51,7 @@ const Wrapper = styled.div`
 const Container = styled.div`
   max-width: 130rem;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 2.4rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

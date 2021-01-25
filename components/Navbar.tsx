@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 const links: Link[] = [
   { text: 'What you will learn', link: '#what-you-will-learn' },
-  { text: 'Contact', link: '#' },
+  { text: 'Contact', link: '#contact' },
 ]
 
 interface Link {
@@ -24,7 +24,7 @@ const Navbar = () => {
         <MenuList onMouseLeave={() => setIndex(null)}>
           <AnimateSharedLayout>
             {links.map(({ text, link }, i) => (
-              <Link href={link}>
+              <Link href={link} key={link}>
                 <StyledLink>
                   <MenuListItem onMouseOver={() => setIndex(i)}>
                     {text}

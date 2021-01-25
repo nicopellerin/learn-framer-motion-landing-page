@@ -1,14 +1,19 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { motion, useTransform, useViewportScroll } from 'framer-motion'
 
 const Bar = () => {
+  const { scrollY } = useViewportScroll()
+
+  const opacityVal = useTransform(scrollY, [0, 200, 400], [1, 0.5, 0])
+  const yVal = useTransform(scrollY, [0, 200, 400], [0, 30, 75])
+
   return (
     <motion.span
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 1.2 }}
+      transition={{ delay: 1.8 }}
     >
       <Wrapper
         initial={{ x: '-50%' }}
@@ -20,12 +25,14 @@ const Bar = () => {
           repeatType: 'reverse',
         }}
       >
-        <Link href="#what-you-will-learn">
-          <a>
-            <Text>Learn more</Text>
-          </a>
-        </Link>
-        <Line />
+        <Container style={{ opacity: opacityVal, y: yVal }}>
+          <Link href="#what-you-will-learn">
+            <a>
+              <Text>Learn more</Text>
+            </a>
+          </Link>
+          <Line />
+        </Container>
       </Wrapper>
     </motion.span>
   )
@@ -43,6 +50,13 @@ const Wrapper = styled(motion.div)`
   bottom: 0;
   left: 50%;
   z-index: 20;
+`
+
+const Container = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 
 const Text = styled(motion.span)`

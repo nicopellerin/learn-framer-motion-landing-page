@@ -8,6 +8,7 @@ import LoopLogo from './LoopLogo'
 import DropdownMobile from './DropdownMobile'
 import Overlay from './Overlay'
 import VideoPlayer from './VideoPlayer'
+import SignupForm from './SignupForm'
 
 interface Props {
   toggleDropdown: boolean
@@ -23,6 +24,8 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
     const idx = window.setTimeout(() => setButtonLoaded(true), 1500)
     return () => window.clearTimeout(idx)
   }, [])
+
+  const coursePresale = false
 
   return (
     <>
@@ -55,59 +58,65 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
           >
             Learn Framer Motion - from beginner to advanced
           </Tagline>
-          <Button
-            initial={{ opacity: 0, y: 20 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              type: 'spring',
-              damping: 18,
-              stiffness: 60,
-              delay: 0.5,
-            }}
-            onMouseOver={() => setShow(true)}
-            onMouseOut={() => setShow(false)}
-          >
-            Pre-order &mdash; 19.99${' '}
-            <span style={{ textDecoration: 'line-through', color: 'crimson' }}>
-              49.99$
-            </span>
-          </Button>
-          <AnimatePresence>
-            {buttonLoaded && show && (
-              <SavingsWrapper
-                initial={{ y: -30, rotateX: 145 }}
-                animate={{ y: 0, rotateX: 0 }}
-                exit={{ y: -35, rotateX: 90 }}
-                transition={{ type: 'spring', damping: 20 }}
+          {coursePresale ? (
+            <>
+              <Button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  type: 'spring',
+                  damping: 18,
+                  stiffness: 60,
+                  delay: 0.5,
+                }}
+                onMouseOver={() => setShow(true)}
+                onMouseOut={() => setShow(false)}
               >
-                <Savings>Save 40%</Savings>
-              </SavingsWrapper>
-            )}
-          </AnimatePresence>
-          <WatchVideoButton
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-            }}
-            transition={{
-              type: 'spring',
-              damping: 18,
-              stiffness: 60,
-              delay: 1.2,
-            }}
-            onClick={() => setShowVideoPlayer(true)}
-          >
-            <FaTv
-              style={{
-                marginRight: '0.7rem',
-                color: 'rebeccapurple',
-              }}
-            />
-            Watch video
-          </WatchVideoButton>
+                Pre-order &mdash; 19.99${' '}
+                <span
+                  style={{ textDecoration: 'line-through', color: 'crimson' }}
+                >
+                  49.99$
+                </span>
+              </Button>
+              <AnimatePresence>
+                {buttonLoaded && show && (
+                  <SavingsWrapper
+                    initial={{ y: -30, rotateX: 145 }}
+                    animate={{ y: 0, rotateX: 0 }}
+                    exit={{ y: -35, rotateX: 90 }}
+                    transition={{ type: 'spring', damping: 20 }}
+                  >
+                    <Savings>Save 40%</Savings>
+                  </SavingsWrapper>
+                )}
+              </AnimatePresence>
+              <WatchVideoButton
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{
+                  type: 'spring',
+                  damping: 18,
+                  stiffness: 60,
+                  delay: 1.2,
+                }}
+                onClick={() => setShowVideoPlayer(true)}
+              >
+                <FaTv
+                  style={{
+                    marginRight: '0.7rem',
+                    color: 'rebeccapurple',
+                  }}
+                />
+                Watch video
+              </WatchVideoButton>
+            </>
+          ) : null}
         </Info>
       </Wrapper>
       <AnimatePresence>
@@ -137,6 +146,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 `
 
 const Info = styled(motion.div)`
@@ -177,14 +187,13 @@ const Title = styled(motion.h1)`
 
 const Tagline = styled(motion.h2)`
   font-size: 2.6rem;
-  /* color: rgba(244, 244, 244, 0.9); */
   background: -webkit-linear-gradient(45deg, #f1f1f1 1%, #f6deff 123.31%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 500;
   letter-spacing: 1.1px;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   font-family: 'Inter';
   line-height: 1.3;
   text-align: center;

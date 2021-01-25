@@ -65,23 +65,19 @@ const DropdownMobile: FC<Props> = ({ setToggleDropdown }) => {
           animate="show"
           exit="exit"
         >
-          <DropdownItem variants={itemVariants}>
-            <LinkStyled
-              href="https://github.com/nicopellerin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <DropdownItem
+            variants={itemVariants}
+            onClick={() => setToggleDropdown(false)}
+          >
+            <LinkStyled href="#what-you-will-learn">
               What you will learn
             </LinkStyled>
           </DropdownItem>
-          <DropdownItem variants={itemVariants}>
-            <LinkStyled
-              href="https://twitter.com/nicopellerin_io"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Contact
-            </LinkStyled>
+          <DropdownItem
+            variants={itemVariants}
+            onClick={() => setToggleDropdown(false)}
+          >
+            <LinkStyled href="#contact">Contact</LinkStyled>
           </DropdownItem>
         </DropdownList>
       </DropdownWrapper>

@@ -10,7 +10,7 @@ const LoopLogo = () => (
       alt="Loop"
     />
     <Logo
-      src="/images/react-logo.svg"
+      src="/images/react-logo.png"
       animate={{ y: [0, 3, 0], rotate: [3, 0, -3] }}
       transition={{
         duration: 4,
@@ -26,7 +26,7 @@ export default memo(LoopLogo)
 // Styles
 const LogoWrapper = styled.div`
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 
   @media (min-width: 1024px) {
     margin-bottom: 4rem;
@@ -35,18 +35,18 @@ const LogoWrapper = styled.div`
 
 const Logo = styled(motion.img)`
   position: relative;
-  width: 20rem;
   z-index: 4;
+  width: 26rem;
 
   @media (min-width: 1024px) {
-    width: auto;
+    width: 40rem;
   }
 `
 
 const Loop = styled(motion.img)`
   position: absolute;
-  top: 45%;
-  left: 75%;
+  top: 50%;
+  left: 65%;
   width: 35rem;
   height: 35rem;
   z-index: 3;
