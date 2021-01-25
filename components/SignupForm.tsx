@@ -57,7 +57,7 @@ const SignupForm = () => {
         />
         <Button>Sign up</Button>
         <Messages initial={{ x: '-50%', y: 10 }} animate={{ y: 0 }}>
-          {errMessage && <span>{errMessage}</span>}
+          {errMessage && <MessageError>{errMessage}</MessageError>}
           {successMessage && <MessageSuccess>{successMessage}</MessageSuccess>}
         </Messages>
       </StyledForm>
@@ -133,10 +133,16 @@ const Messages = styled(motion.div)`
   left: 50%;
   font-size: 2rem;
   font-weight: 600;
-  color: green;
 `
 
 const MessageSuccess = styled(motion.span)`
   width: 100%;
   white-space: nowrap;
+  color: green;
+`
+
+const MessageError = styled(motion.span)`
+  width: 100%;
+  white-space: nowrap;
+  color: red;
 `
