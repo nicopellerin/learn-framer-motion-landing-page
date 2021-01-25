@@ -43,7 +43,7 @@ const ContactForm = () => {
     }
 
     try {
-      await axios.post('/.netlify/functions/contact-form', body)
+      await axios.post('/api/contact', body)
       setIsSent(true)
       setName('')
       setEmail('')
