@@ -1,8 +1,36 @@
-import React from 'react'
+import * as React from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 const SignupForm = () => {
+  const [email, setEmail] = useState('')
+  const [errMessage, setErrMessage] = useState('')
+  const [successMessage, setSuccessMessage] = useState('')
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    const res = await fetch('/api/mailchimp', {
+      body: JSON.stringify({
+        email,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    })
+
+    const { error } = await res.json()
+
+    if (error) {
+      setErrMessage(error)
+      return
+    }
+
+    setEmail('')
+    setSuccessMessage('Thanks for subscribing! 🎉')
+  }
   return (
     <Wrapper
       initial={{ opacity: 0, y: 20 }}
@@ -17,10 +45,21 @@ const SignupForm = () => {
         delay: 0.8,
       }}
     >
-      <Tagline>Coming soon. Sign up to receive updates on this course!</Tagline>
-      <StyledForm>
-        <Input type="email" placeholder="Your email" />
+      <Tagline>
+        Coming soon. Sign up to receive updates on this course! 🎉
+      </Tagline>
+      <StyledForm onSubmit={handleSubscribe}>
+        <Input
+          type="email"
+          placeholder="Your email"
+          value={email}
+          onChange={(e) => setEmail(e.currentTarget.value)}
+        />
         <Button>Sign up</Button>
+        <Messages initial={{ x: '-50%', y: 10 }} animate={{ y: 0 }}>
+          {errMessage && <span>{errMessage}</span>}
+          {successMessage && <MessageSuccess>{successMessage}</MessageSuccess>}
+        </Messages>
       </StyledForm>
     </Wrapper>
   )
@@ -51,6 +90,7 @@ const StyledForm = styled.form`
   width: 100%;
   max-width: 50rem;
   margin: 0 auto;
+  position: relative;
 `
 
 const Input = styled.input`
@@ -85,4 +125,18 @@ const Button = styled.button`
   @media (min-width: 1024px) {
     font-size: 2.4rem;
   }
+`
+
+const Messages = styled(motion.div)`
+  position: absolute;
+  bottom: -5.5rem;
+  left: 50%;
+  font-size: 2rem;
+  font-weight: 600;
+  color: green;
+`
+
+const MessageSuccess = styled(motion.span)`
+  width: 100%;
+  white-space: nowrap;
 `
