@@ -59,7 +59,7 @@ const ContactForm = () => {
 
   useEffect(() => {
     if (errors) {
-      setTimeout(() => setErrors(''), 3000)
+      setTimeout(() => setErrors(''), 4000)
     }
   }, [errors])
 
@@ -75,6 +75,7 @@ const ContactForm = () => {
       <AnimatePresence>
         {isSent ? (
           <SuccessMsgWrapper>
+            <SuccessEmoji>🎉</SuccessEmoji>
             <SuccessTitle
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -299,13 +300,20 @@ const SuccessMsgWrapper = styled(motion.div)`
 
 const SuccessTitle = styled(motion.h3)`
   margin: 0;
-  font-size: 3rem;
+  font-size: 3.6rem;
   color: #cc4bc2;
   line-height: 1.2;
+  font-family: 'Space Grotesk', sans-serif;
 `
 
 const SuccessMsg = styled(motion.h5)`
-  font-size: 1.8rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 600;
   margin-top: 2.6rem;
+`
+
+const SuccessEmoji = styled.span`
+  font-size: 5rem;
+  display: block;
+  margin-bottom: 2rem;
 `
