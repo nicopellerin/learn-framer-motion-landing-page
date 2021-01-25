@@ -34,13 +34,19 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+          <title>LearnFramerMotion.com - From beginner to advanced</title>
+          <meta
+            name="og:title"
+            content="LearnFramerMotion.com - From beginner to advanced"
+          />
+          <meta name="og:url" content="https://learnframermotion.com" />
           <meta
             name="description"
-            content="Learn Framer Motion - From beginner to advanced"
+            content="Interactive + video course that teaches you all things animation using the powerful React library Framer Motion."
           />
-          <meta name="theme-color" content="#8352FD" />
+          <meta name="theme-color" content="#603cba" />
           <link rel="icon" type="image/png" href="/favicon.png" />
-          <meta name="theme-color" content="#8352FD" />
+          <meta name="theme-color" content="#603cba" />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -49,13 +55,9 @@ export default class MyDocument extends Document {
           <link
             rel="mask-icon"
             href="/icons/safari-pinned-tab.svg"
-            color="#5bbad5"
+            color="#603cba"
           />
           <meta name="msapplication-TileColor" content="#603cba" />
-          <meta
-            name="msapplication-config"
-            content="/icons/browserconfig.xml"
-          />
           {/* <link rel="manifest" href="/manifest.json" /> */}
         </Head>
         <body>
