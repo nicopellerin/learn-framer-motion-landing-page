@@ -83,7 +83,7 @@ const Wrapper = styled(motion.div)`
   justify-content: center;
   flex-direction: column;
   padding: 4rem 2rem;
-  background: url('/images/bg.png');
+  background: url('/images/bg.jpg');
   background-size: cover;
   border-radius: 0.5rem;
   margin: 6rem 0 4rem;
