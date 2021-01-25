@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
+
 import SignupForm from './SignupForm'
 
 const WhatYouWillLearn = () => {
@@ -48,6 +50,17 @@ const WhatYouWillLearn = () => {
         </Text>
         <SignupForm />
       </Container>
+      <Wave
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMinYMin slice"
+        viewBox="0 0 1200 129"
+      >
+        <path
+          width="100%"
+          d="M 0 64 L 48 48 C 96 32 192 0 288 0 C 384 0 480 32 576 58.7 C 672 85 768 107 864 85.3 C 960 64 1056 0 1152 0 C 1248 0 1344 64 1392 96 L 1440 128 L 1440 192 L 0 192 Z"
+          fill="#fff"
+        ></path>
+      </Wave>
     </Wrapper>
   )
 }
@@ -91,4 +104,14 @@ const ListItem = styled.li`
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.4;
+`
+
+const Wave = styled(motion.svg)`
+  position: absolute;
+  bottom: 0px;
+  z-index: 3103;
+
+  @media (min-width: 1024px) {
+    bottom: -30px;
+  }
 `
