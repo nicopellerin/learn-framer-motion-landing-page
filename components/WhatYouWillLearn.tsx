@@ -104,7 +104,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   font-size: 2rem;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.6;
 `
 
 const Wave = styled(motion.svg)`

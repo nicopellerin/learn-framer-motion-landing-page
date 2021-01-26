@@ -199,6 +199,7 @@ const FormWrapper = styled.form`
   align-items: flex-start;
   position: relative;
   max-width: 75%;
+  z-index: 3000;
 
   @media (max-width: 500px) {
     padding: 0;
@@ -225,7 +226,7 @@ const InputFieldWrapper = styled.div`
 
 const Label = styled.label`
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 5px;
   color: #bb6bd9;
 `
@@ -267,7 +268,7 @@ const Button = styled(motion.button)`
   cursor: pointer;
   position: relative;
   z-index: 30;
-  box-shadow: 0 0 10px 3px rgba(89, 86, 213, 0.3);
+  box-shadow: 0 0 10px 3px rgba(89, 86, 213, 0.2);
   width: 100%;
   display: flex;
   align-items: center;

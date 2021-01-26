@@ -156,7 +156,7 @@ export default HeroBackground
 
 // Styles
 const Wrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -172,7 +172,7 @@ const Info = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -209,7 +209,7 @@ const Tagline = styled(motion.h2)`
   -webkit-text-fill-color: transparent;
   font-weight: 500;
   letter-spacing: 1.1px;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   font-family: 'Inter';
   line-height: 1.3;
   text-align: center;

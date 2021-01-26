@@ -7,7 +7,7 @@ const Bar = () => {
   const { scrollY } = useViewportScroll()
 
   const opacityVal = useTransform(scrollY, [0, 200, 400], [1, 0.5, 0])
-  // const yVal = useTransform(scrollY, [0, 200, 400], [0, 30, 75])
+  const yVal = useTransform(scrollY, [0, 200, 400], [0, 30, 75])
 
   return (
     <motion.span
@@ -25,7 +25,7 @@ const Bar = () => {
           repeatType: 'reverse',
         }}
       >
-        <Container style={{ opacity: opacityVal }}>
+        <Container style={{ opacity: opacityVal, y: yVal }}>
           <Link href="#what-you-will-learn">
             <a>
               <Text>Learn more</Text>
@@ -70,7 +70,11 @@ const Text = styled(motion.span)`
 
 const Line = styled(motion.div)`
   width: 2px;
-  height: 4rem;
+  height: 2.5rem;
   background: rgba(97, 218, 251, 0.7);
   margin-top: 0.8rem;
+
+  @media (min-width: 768px) {
+    height: 4rem;
+  }
 `

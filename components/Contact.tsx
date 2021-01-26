@@ -10,7 +10,7 @@ const Contact = () => {
         <Title>Say hi &mdash;</Title>
         <Tagline>
           Just wanna say hi or have any questions regarding the course? Hit me
-          up using the form and I will get back to you asap.
+          up and I will get back to you asap &#128049;
         </Tagline>
         <ContactForm />
       </Container>

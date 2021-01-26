@@ -100,8 +100,8 @@ export default DropdownMobile
 
 // Styles
 const DropdownWrapper = styled(motion.div)`
-  position: fixed;
-  height: 24rem;
+  position: absolute;
+  height: 23rem;
   width: 100%;
   background: #010101;
   bottom: 0;
@@ -146,7 +146,7 @@ const CloseWrapper = styled(motion.div)`
   border-radius: 50%;
   background: #010101;
   position: absolute;
-  bottom: 28rem;
+  bottom: 27rem;
   left: 50%;
   display: flex;
   justify-content: center;

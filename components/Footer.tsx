@@ -5,13 +5,13 @@ const Footer = () => (
   <Wrapper>
     <Container>
       &copy; {new Date().getFullYear()}{' '}
-      <a
+      <Astyled
         href="https://nicopellerin.io"
         target="_blank"
         rel="noopener noreferrer"
       >
         Nico Pellerin
-      </a>
+      </Astyled>
       . All rights reserved.
     </Container>
   </Wrapper>
@@ -29,4 +29,8 @@ const Container = styled.div`
   font-size: 1.6rem;
   font-weight: 500;
   text-align: center;
+`
+
+const Astyled = styled.a`
+  color: #bb6bd9;
 `

@@ -26,7 +26,7 @@ export default memo(LoopLogo)
 // Styles
 const LogoWrapper = styled.div`
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
 
   @media (min-width: 1024px) {
     margin-bottom: 4rem;
