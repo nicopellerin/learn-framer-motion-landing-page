@@ -239,41 +239,41 @@ const Button = styled(motion.button)`
   }
 `
 
-const SavingsWrapper = styled(motion.div)`
-  position: relative;
-  width: 20rem;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-`
+// const SavingsWrapper = styled(motion.div)`
+//   position: relative;
+//   width: 20rem;
+//   display: flex;
+//   justify-content: center;
+//   text-align: center;
+// `
 
-const Savings = styled(motion.span)`
-  background: rgba(244, 244, 244, 1);
-  position: absolute;
-  width: 100%;
-  font-size: 1.6rem;
-  padding: 0.5rem;
-  font-weight: 600;
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  color: rebeccapurple;
-  box-shadow: 0 0 10px 5px rgba(89, 86, 213, 0.3);
-`
+// const Savings = styled(motion.span)`
+//   background: rgba(244, 244, 244, 1);
+//   position: absolute;
+//   width: 100%;
+//   font-size: 1.6rem;
+//   padding: 0.5rem;
+//   font-weight: 600;
+//   border-bottom-left-radius: 0.5rem;
+//   border-bottom-right-radius: 0.5rem;
+//   color: rebeccapurple;
+//   box-shadow: 0 0 10px 5px rgba(89, 86, 213, 0.3);
+// `
 
-const WatchVideoButton = styled(motion.button)`
-  z-index: 30;
-  margin-top: 4.2rem;
-  border: 2px solid rgba(227, 154, 255, 0.7);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  background: #f6deff;
-  cursor: pointer;
-  color: rebeccapurple;
-  display: flex;
-  align-items: center;
+// const WatchVideoButton = styled(motion.button)`
+//   z-index: 30;
+//   margin-top: 4.2rem;
+//   border: 2px solid rgba(227, 154, 255, 0.7);
+//   padding: 0.5rem 1rem;
+//   border-radius: 0.5rem;
+//   font-weight: 600;
+//   background: #f6deff;
+//   cursor: pointer;
+//   color: rebeccapurple;
+//   display: flex;
+//   align-items: center;
 
-  @media (min-width: 1024px) {
-    margin-top: 5rem;
-  }
-`
+//   @media (min-width: 1024px) {
+//     margin-top: 5rem;
+//   }
+// `
