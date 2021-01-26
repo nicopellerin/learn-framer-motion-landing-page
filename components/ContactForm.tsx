@@ -259,7 +259,7 @@ const TextareaField = styled.textarea`
 const Button = styled(motion.button)`
   border: none;
   padding: 1.4rem 2rem;
-  font-size: 2.2rem;
+  font-size: 2rem;
   border-radius: 0.5rem;
   font-weight: 600;
   background: linear-gradient(95.66deg, #61dafb 30.07%, #bb6bd9 104.98%);

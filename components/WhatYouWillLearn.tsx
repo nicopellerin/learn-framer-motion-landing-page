@@ -88,6 +88,7 @@ const Title = styled.h2`
   font-size: 6rem;
   font-family: 'Space Grotesk', sans-serif;
   color: #333;
+  line-height: 1.1;
 `
 
 const Text = styled.p`

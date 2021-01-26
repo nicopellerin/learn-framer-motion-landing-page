@@ -34,18 +34,7 @@ const SignupForm = () => {
   }
   return (
     <Wrapper id="sign-up">
-      <h2
-        style={{
-          fontSize: '6rem',
-          textAlign: 'center',
-          marginBottom: '2rem',
-          fontFamily: 'Space Grotesk',
-          lineHeight: 1,
-          color: '#f4f4f4',
-        }}
-      >
-        Coming soon.
-      </h2>
+      <Title>Coming soon.</Title>
       <Tagline>Sign up to receive updates on this course! 🎉</Tagline>
       <StyledForm onSubmit={handleSubscribe}>
         <Input
@@ -88,6 +77,8 @@ const Wrapper = styled(motion.div)`
   margin: 6rem -2rem 4rem;
   scroll-margin-top: 25em;
   box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.2);
+  border-top: 2px solid #f4f4f4;
+  border-bottom: 2px solid #f4f4f4;
 
   @media (min-width: 450px) {
     border-radius: 0.5rem;
@@ -98,16 +89,29 @@ const Wrapper = styled(motion.div)`
   }
 `
 
+const Title = styled.h2`
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1;
+  color: #f4f4f4;
+
+  @media (min-width: 450px) {
+    font-size: 6rem;
+  }
+`
+
 const Tagline = styled.h3`
   color: #61dafb;
-  font-size: 2.2rem;
+  font-size: 2rem;
   text-align: center;
   line-height: 1.4;
   font-weight: 400;
   letter-spacing: 1.1px;
   margin-bottom: 3.2rem;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 450px) {
     font-size: 2.4rem;
   }
 `
@@ -122,7 +126,7 @@ const StyledForm = styled.form`
 const Input = styled.input`
   border: none;
   padding: 1.4rem 1rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: inherit;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
@@ -135,12 +139,16 @@ const Input = styled.input`
   &::placeholder {
     color: pink;
   }
+
+  @media (min-width: 450px) {
+    font-size: 2rem;
+  }
 `
 
 const Button = styled(motion.button)`
   border: none;
   padding: 1.4rem 1.8rem;
-  font-size: 2.2rem;
+  font-size: 2rem;
   border-radius: 0.5rem;
   font-weight: 600;
   background: linear-gradient(95.66deg, #61dafb 30.07%, #bb6bd9 104.98%);
@@ -152,7 +160,7 @@ const Button = styled(motion.button)`
   width: 100%;
   outline: none;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 450) {
     font-size: 2.4rem;
   }
 `
@@ -161,11 +169,11 @@ const Messages = styled(motion.div)`
   position: absolute;
   bottom: -9.5rem;
   left: 50%;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 500;
 
-  @media (min-width: 1024px) {
-    bottom: -12.5rem;
+  @media (min-width: 768px) {
+    bottom: -4.5rem;
   }
 `
 
