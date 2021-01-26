@@ -137,6 +137,7 @@ const LinkStyled = styled.a`
   font-weight: 500;
   letter-spacing: 1.2px;
   text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
 `
 
 const CloseWrapper = styled(motion.div)`

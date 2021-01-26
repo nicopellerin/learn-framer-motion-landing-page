@@ -39,7 +39,7 @@ const Navbar = () => {
                         width: '100%',
                         height: '0.3rem',
                         background: '#F6DEFF',
-                        bottom: '-1.2rem',
+                        bottom: '-1.1rem',
                         borderRadius: '0.5rem',
                       }}
                     />
@@ -94,12 +94,13 @@ const MenuList = styled.ul`
 const MenuListItem = styled.li`
   font-size: 2rem;
   color: rgba(244, 244, 244, 0.9);
-  font-weight: 600;
   cursor: pointer;
 `
 
 const StyledLink = styled.a`
   position: relative;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
 
   &:not(:last-child) {
     margin-right: 5rem;
