@@ -1,8 +1,8 @@
-import React, { useState, useEffect, Dispatch, SetStateAction, FC } from 'react'
+import React, { useState, Dispatch, SetStateAction, FC } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 import { AnimatePresence, motion } from 'framer-motion'
-import { FaTv } from 'react-icons/fa'
+// import { FaTv } from 'react-icons/fa'
 
 import LoopLogo from './LoopLogo'
 import DropdownMobile from './DropdownMobile'
@@ -16,16 +16,14 @@ interface Props {
 }
 
 const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
-  const [show, setShow] = useState(false)
+  // const [show, setShow] = useState(false)
   const [showVideoPlayer, setShowVideoPlayer] = useState(false)
-  const [buttonLoaded, setButtonLoaded] = useState(false)
+  // const [buttonLoaded, setButtonLoaded] = useState(false)
 
-  useEffect(() => {
-    const idx = window.setTimeout(() => setButtonLoaded(true), 1500)
-    return () => window.clearTimeout(idx)
-  }, [])
-
-  const coursePresale = false
+  // useEffect(() => {
+  //   const idx = window.setTimeout(() => setButtonLoaded(true), 1500)
+  //   return () => window.clearTimeout(idx)
+  // }, [])
 
   return (
     <>
@@ -58,8 +56,7 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
           >
             Learn Framer Motion - from beginner to advanced
           </Tagline>
-          {coursePresale ? (
-            <>
+          {/* <>
               <Button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{
@@ -115,28 +112,27 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
                 />
                 Watch video
               </WatchVideoButton>
-            </>
-          ) : (
-            <Link href="#sign-up">
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  type: 'spring',
-                  damping: 18,
-                  stiffness: 60,
-                  delay: 0.5,
-                }}
-              >
-                <Button whileHover={{ y: -1 }} whileTap={{ y: 1 }}>
-                  Sign up!
-                </Button>
-              </motion.span>
-            </Link>
-          )}
+            </> */}
+
+          <Link href="#sign-up">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                type: 'spring',
+                damping: 18,
+                stiffness: 60,
+                delay: 0.5,
+              }}
+            >
+              <Button whileHover={{ y: -1 }} whileTap={{ y: 1 }}>
+                Sign up!
+              </Button>
+            </motion.span>
+          </Link>
         </Info>
       </Wrapper>
       <AnimatePresence>
