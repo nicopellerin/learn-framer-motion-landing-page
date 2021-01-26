@@ -3,14 +3,20 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { FaExclamationCircle } from 'react-icons/fa'
+import { Circle } from 'better-react-spinkit'
 
 const SignupForm = () => {
   const [email, setEmail] = useState('')
+  const [isSending, setIsSending] = useState(false)
   const [errMessage, setErrMessage] = useState('')
   const [successMessage, setSuccessMessage] = useState('')
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault()
+    setErrMessage('')
+    setSuccessMessage('')
+
+    setIsSending(true)
 
     const res = await fetch('/api/mailchimp', {
       body: JSON.stringify({
@@ -26,10 +32,13 @@ const SignupForm = () => {
 
     if (error) {
       setErrMessage(error)
+      setIsSending(false)
       return
     }
 
+    setErrMessage('')
     setEmail('')
+    setIsSending(false)
     setSuccessMessage('Thanks for subscribing! 🎉')
   }
   return (
@@ -43,8 +52,19 @@ const SignupForm = () => {
           value={email}
           onChange={(e) => setEmail(e.currentTarget.value)}
         />
-        <Button whileHover={{ y: -1 }} whileTap={{ y: 1 }}>
-          Sign up
+        <Button
+          whileHover={{ y: isSending ? 0 : -1 }}
+          whileTap={{ y: isSending ? 0 : 1 }}
+          disabled={isSending}
+        >
+          {isSending ? (
+            <>
+              <Circle style={{ marginRight: 7 }} />
+              Signing up...
+            </>
+          ) : (
+            'Sign up'
+          )}
         </Button>
         {(errMessage || successMessage) && (
           <Messages initial={{ x: '-50%', y: 10 }} animate={{ y: 0 }}>
@@ -146,6 +166,9 @@ const Input = styled.input`
 `
 
 const Button = styled(motion.button)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   padding: 1.4rem 1.8rem;
   font-size: 2rem;
@@ -159,6 +182,11 @@ const Button = styled(motion.button)`
   box-shadow: 0 0 10px 3px rgba(89, 86, 213, 0.2);
   width: 100%;
   outline: none;
+
+  &:disabled {
+    cursor: initial;
+    pointer-events: none;
+  }
 
   @media (min-width: 450) {
     font-size: 2.4rem;
@@ -180,7 +208,7 @@ const Messages = styled(motion.div)`
 const MessageSuccess = styled(motion.span)`
   width: 100%;
   white-space: nowrap;
-  color: green;
+  color: var(--successColor);
   display: flex;
   align-items: center;
 `
