@@ -43,6 +43,12 @@ export default class MyDocument extends Document {
             name="description"
             content="Interactive + video course that teaches you all things animation using the powerful React library Framer Motion."
           />
+          <meta
+            name="og:description"
+            content="Interactive + video course that teaches you all things animation using the powerful React library Framer Motion.
+            "
+          />
+          <meta name="og:image" content="/images/og-image.jpg" />
           <meta name="theme-color" content="#603cba" />
           <link rel="icon" type="image/png" href="/favicon.png" />
           <meta name="theme-color" content="#603cba" />
