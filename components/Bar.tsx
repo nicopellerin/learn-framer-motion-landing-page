@@ -49,7 +49,7 @@ const Wrapper = styled(motion.div)`
   position: absolute;
   bottom: 0;
   left: 50%;
-  z-index: 20;
+  z-index: 2000;
 `
 
 const Container = styled(motion.div)`
