@@ -147,7 +147,7 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
           transition={{ type: 'spring', damping: 20, delay: 0.9 }}
         />
         <ManTwo
-          src="/images/black_man_3d.png"
+          src="/images/black_man_3d-2.png"
           initial={{ y: 500 }}
           animate={{ y: 0 }}
           transition={{ type: 'spring', damping: 20, delay: 1.1 }}
@@ -392,34 +392,34 @@ const WomanOne = styled(motion.img)`
 const ManTwo = styled(motion.img)`
   position: absolute;
   z-index: 1;
-  right: -4%;
+  right: 1%;
   bottom: 1%;
-  width: 18rem;
+  width: 7.2rem;
 
   @media (max-height: 667px) {
-    width: 16rem;
+    width: 6.4rem;
   }
 
   @media (min-width: 768px) {
-    width: 32rem;
-    right: -2%;
-    bottom: 1%;
+    width: 12.8rem;
+    right: 3%;
+    bottom: 2%;
   }
 
   @media (min-width: 1024px) {
-    right: -2%;
+    right: 2%;
     bottom: 3%;
-    width: 38rem;
+    width: 15.2rem;
   }
 
   @media (min-width: 1366px) {
-    right: -2%;
+    right: 3.2%;
     bottom: 4%;
-    width: 46rem;
+    width: 18.5rem;
   }
 
   @media (min-width: 1600px) {
-    right: 0;
+    /* right: 3; */
     bottom: 8%;
   }
 `

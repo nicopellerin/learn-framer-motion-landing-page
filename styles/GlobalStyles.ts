@@ -35,7 +35,6 @@ html {
   height: 100%;
   min-height: 100%;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 
   @media (max-width: 1500px) {
     font-size: 57.5%;
