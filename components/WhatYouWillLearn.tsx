@@ -11,7 +11,8 @@ const WhatYouWillLearn = () => {
         <Title>What you will learn &mdash;</Title>
         <Text>
           In this course, we will be creating{' '}
-          <strong>2 website projects</strong> that are composed of many animated
+          <strong>2 website projects</strong> (including a{' '}
+          <strong>full portfolio</strong>) that are composed of many animated
           components, starting from <strong>simple</strong> to then more{' '}
           <strong>advanced</strong> animations. My goal is to teach you
           beautiful animation concepts that you can then use in your own
