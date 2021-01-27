@@ -91,7 +91,7 @@ const Wrapper = styled(motion.div)`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 4rem 2rem 5rem;
+  padding: 5rem 2rem 8rem;
   background: url('/images/bg.jpg');
   background-size: cover;
   margin: 6rem -2rem 4rem;
@@ -195,7 +195,7 @@ const Button = styled(motion.button)`
 
 const Messages = styled(motion.div)`
   position: absolute;
-  bottom: -9.5rem;
+  bottom: -5.5rem;
   left: 50%;
   font-size: 1.8rem;
   font-weight: 500;
