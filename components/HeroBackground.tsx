@@ -138,25 +138,25 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
           src="/images/white_man_3d.png"
           initial={{ y: 500 }}
           animate={{ y: 0 }}
-          transition={{ type: 'spring', damping: 20, delay: 1 }}
+          transition={{ type: 'spring', damping: 20, delay: 0.7 }}
         />
         <WomanOne
           src="/images/black_girl_3d.png"
           initial={{ y: 500 }}
           animate={{ y: 0 }}
-          transition={{ type: 'spring', damping: 20, delay: 1.2 }}
+          transition={{ type: 'spring', damping: 20, delay: 0.9 }}
         />
         <ManTwo
           src="/images/black_man_3d.png"
           initial={{ y: 500 }}
           animate={{ y: 0 }}
-          transition={{ type: 'spring', damping: 20, delay: 1.4 }}
+          transition={{ type: 'spring', damping: 20, delay: 1.1 }}
         />
         <WomanTwo
           src="/images/white_girl_3d.png"
           initial={{ y: 500 }}
           animate={{ y: 0 }}
-          transition={{ type: 'spring', damping: 20, delay: 1.6 }}
+          transition={{ type: 'spring', damping: 20, delay: 1.3 }}
         />
       </Wrapper>
       <AnimatePresence>
@@ -214,7 +214,7 @@ const Info = styled(motion.div)`
 `
 
 const Title = styled(motion.h1)`
-  font-size: 7.2rem;
+  font-size: 5.2rem;
   background: -webkit-linear-gradient(45deg, #e39aff 1%, #61dafb 123.31%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -225,13 +225,17 @@ const Title = styled(motion.h1)`
   line-height: 1.1;
   text-align: center;
 
+  @media (min-width: 768px) {
+    font-size: 7.2rem;
+  }
+
   @media (min-width: 1366px) {
     font-size: 8rem;
   }
 `
 
 const Tagline = styled(motion.h2)`
-  font-size: 2.6rem;
+  font-size: 2rem;
   background: -webkit-linear-gradient(45deg, #f1f1f1 1%, #f6deff 123.31%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -242,6 +246,10 @@ const Tagline = styled(motion.h2)`
   font-family: 'Inter';
   line-height: 1.3;
   text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 2.4rem;
+  }
 
   @media (min-width: 1024px) {
     margin-bottom: 4.5rem;
@@ -256,7 +264,7 @@ const Tagline = styled(motion.h2)`
 const Button = styled(motion.button)`
   border: none;
   padding: 1.4rem 2rem;
-  font-size: 2.2rem;
+  font-size: 2rem;
   border-radius: 0.5rem;
   font-weight: 600;
   background: linear-gradient(95.66deg, #61dafb 30.07%, #bb6bd9 104.98%);
@@ -266,6 +274,10 @@ const Button = styled(motion.button)`
   z-index: 30;
   box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.5);
   outline: none;
+
+  @media (min-width: 768px) {
+    font-size: 2.2rem;
+  }
 
   @media (min-width: 1366px) {
     font-size: 2.4rem;
@@ -277,7 +289,8 @@ const ManOne = styled(motion.img)`
   z-index: 100;
   left: -3%;
   bottom: 1%;
-  width: 18rem;
+  width: 14rem;
+  pointer-events: none;
 
   @media (min-width: 768px) {
     left: 0;
@@ -308,7 +321,7 @@ const WomanOne = styled(motion.img)`
   z-index: 100;
   left: 3%;
   bottom: 0;
-  width: 24rem;
+  width: 20rem;
 
   @media (min-width: 768px) {
     left: 8%;
@@ -339,7 +352,7 @@ const ManTwo = styled(motion.img)`
   z-index: 100;
   right: -5%;
   bottom: 1%;
-  width: 18rem;
+  width: 14rem;
 
   @media (min-width: 768px) {
     width: 32rem;
@@ -370,7 +383,7 @@ const WomanTwo = styled(motion.img)`
   z-index: 100;
   right: 2%;
   bottom: 0;
-  width: 24rem;
+  width: 20rem;
 
   @media (min-width: 768px) {
     width: 42rem;

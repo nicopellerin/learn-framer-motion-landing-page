@@ -26,7 +26,11 @@ export default memo(LoopLogo)
 // Styles
 const LogoWrapper = styled.div`
   position: relative;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    margin-bottom: 1.4rem;
+  }
 
   @media (min-width: 1024px) {
     margin-bottom: 4rem;
@@ -36,7 +40,11 @@ const LogoWrapper = styled.div`
 const Logo = styled(motion.img)`
   position: relative;
   z-index: 4;
-  width: 26rem;
+  width: 20rem;
+
+  @media (min-width: 768px) {
+    width: 26rem;
+  }
 
   @media (min-width: 1366px) {
     width: 40rem;
@@ -47,9 +55,14 @@ const Loop = styled(motion.img)`
   position: absolute;
   top: 50%;
   left: 65%;
-  width: 35rem;
-  height: 35rem;
+  width: 30rem;
+  height: 30rem;
   z-index: 3;
+
+  @media (min-width: 768px) {
+    width: 35rem;
+    height: 35rem;
+  }
 
   @media (min-width: 1366px) {
     width: 50rem;
