@@ -38,7 +38,7 @@ const Logo = styled(motion.img)`
   z-index: 4;
   width: 26rem;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1366px) {
     width: 40rem;
   }
 `
@@ -51,7 +51,7 @@ const Loop = styled(motion.img)`
   height: 35rem;
   z-index: 3;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1366px) {
     width: 50rem;
     height: 50rem;
     top: 40%;

@@ -134,6 +134,30 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
             </motion.span>
           </Link>
         </Info>
+        <ManOne
+          src="/images/white_man_3d.png"
+          initial={{ y: 500 }}
+          animate={{ y: 0 }}
+          transition={{ type: 'spring', damping: 20, delay: 1 }}
+        />
+        <WomanOne
+          src="/images/black_girl_3d.png"
+          initial={{ y: 500 }}
+          animate={{ y: 0 }}
+          transition={{ type: 'spring', damping: 20, delay: 1.2 }}
+        />
+        <ManTwo
+          src="/images/black_man_3d.png"
+          initial={{ y: 500 }}
+          animate={{ y: 0 }}
+          transition={{ type: 'spring', damping: 20, delay: 1.4 }}
+        />
+        <WomanTwo
+          src="/images/white_girl_3d.png"
+          initial={{ y: 500 }}
+          animate={{ y: 0 }}
+          transition={{ type: 'spring', damping: 20, delay: 1.6 }}
+        />
       </Wrapper>
       <AnimatePresence>
         {toggleDropdown && (
@@ -178,9 +202,14 @@ const Info = styled(motion.div)`
   transform: translate(-50%, -50%);
   width: 100%;
 
-  @media (min-width: 1100px) {
+  @media (min-width: 1024px) {
     padding: 0;
-    top: 42%;
+    top: 46%;
+  }
+
+  @media (min-width: 1366px) {
+    padding: 0;
+    top: 40%;
   }
 `
 
@@ -196,7 +225,7 @@ const Title = styled(motion.h1)`
   line-height: 1.1;
   text-align: center;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1366px) {
     font-size: 8rem;
   }
 `
@@ -214,7 +243,11 @@ const Tagline = styled(motion.h2)`
   line-height: 1.3;
   text-align: center;
 
-  @media (min-width: 500px) {
+  @media (min-width: 1024px) {
+    margin-bottom: 4.5rem;
+  }
+
+  @media (min-width: 1366px) {
     font-size: 3rem;
     margin-bottom: 5rem;
   }
@@ -234,8 +267,136 @@ const Button = styled(motion.button)`
   box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.5);
   outline: none;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1366px) {
     font-size: 2.4rem;
+  }
+`
+
+const ManOne = styled(motion.img)`
+  position: absolute;
+  z-index: 100;
+  left: -3%;
+  bottom: 1%;
+  width: 18rem;
+
+  @media (min-width: 768px) {
+    left: 0;
+    width: 32rem;
+    bottom: 2%;
+  }
+
+  @media (min-width: 1024px) {
+    left: -1%;
+    width: 38rem;
+    bottom: 5%;
+  }
+
+  @media (min-width: 1366px) {
+    left: -1%;
+    width: 46rem;
+    bottom: 6%;
+  }
+
+  @media (min-width: 1600px) {
+    left: 0;
+    width: 48rem;
+    bottom: 11%;
+  }
+`
+
+const WomanOne = styled(motion.img)`
+  position: absolute;
+  z-index: 100;
+  left: 3%;
+  bottom: 0;
+  width: 24rem;
+
+  @media (min-width: 768px) {
+    left: 8%;
+    width: 42rem;
+    bottom: 0;
+  }
+
+  @media (min-width: 1024px) {
+    left: 11%;
+    bottom: 0%;
+    width: 50rem;
+  }
+
+  @media (min-width: 1366px) {
+    left: 14%;
+    bottom: 3%;
+    width: 56rem;
+  }
+
+  @media (min-width: 1600px) {
+    left: 12%;
+    bottom: 7%;
+    width: 60rem;
+  }
+`
+
+const ManTwo = styled(motion.img)`
+  position: absolute;
+  z-index: 100;
+  right: -5%;
+  bottom: 1%;
+  width: 18rem;
+
+  @media (min-width: 768px) {
+    width: 32rem;
+    right: -2%;
+    bottom: 1%;
+  }
+
+  @media (min-width: 1024px) {
+    right: -2%;
+    bottom: 3%;
+    width: 38rem;
+  }
+
+  @media (min-width: 1366px) {
+    right: -2%;
+    bottom: 4%;
+    width: 46rem;
+  }
+
+  @media (min-width: 1600px) {
+    right: 0;
+    bottom: 8%;
+    width: 48rem;
+  }
+`
+
+const WomanTwo = styled(motion.img)`
+  position: absolute;
+  z-index: 100;
+  right: 2%;
+  bottom: 0;
+  width: 24rem;
+
+  @media (min-width: 768px) {
+    width: 42rem;
+    right: 6%;
+    bottom: 0%;
+  }
+
+  @media (min-width: 1024px) {
+    right: 12%;
+    bottom: 1%;
+    width: 48rem;
+  }
+
+  @media (min-width: 1366px) {
+    right: 14%;
+    bottom: 4%;
+    width: 56rem;
+  }
+
+  @media (min-width: 1600px) {
+    right: 17%;
+    bottom: 7%;
+    width: 58rem;
   }
 `
 
