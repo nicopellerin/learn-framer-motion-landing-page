@@ -238,6 +238,11 @@ const Title = styled(motion.h1)`
     margin-bottom: 2.6rem;
   }
 
+  @media (max-height: 667px) {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+
   @media (min-width: 768px) {
     font-size: 7.2rem;
     margin-bottom: 3.2rem;
@@ -263,6 +268,11 @@ const Tagline = styled(motion.h2)`
 
   @media (max-width: 330px) {
     font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-height: 667px) {
+    font-size: 1.9rem;
     margin-bottom: 2rem;
   }
 
@@ -316,6 +326,10 @@ const ManOne = styled(motion.img)`
   width: 18rem;
   pointer-events: none;
 
+  @media (max-height: 667px) {
+    width: 16rem;
+  }
+
   @media (min-width: 768px) {
     left: 0;
     width: 32rem;
@@ -346,6 +360,10 @@ const WomanOne = styled(motion.img)`
   left: 3%;
   bottom: 0;
   width: 24rem;
+
+  @media (max-height: 667px) {
+    width: 22rem;
+  }
 
   @media (min-width: 768px) {
     left: 8%;
@@ -378,6 +396,10 @@ const ManTwo = styled(motion.img)`
   bottom: 1%;
   width: 18rem;
 
+  @media (max-height: 667px) {
+    width: 16rem;
+  }
+
   @media (min-width: 768px) {
     width: 32rem;
     right: -2%;
@@ -408,6 +430,10 @@ const WomanTwo = styled(motion.img)`
   right: 2%;
   bottom: 0;
   width: 24rem;
+
+  @media (max-height: 667px) {
+    width: 22rem;
+  }
 
   @media (min-width: 768px) {
     width: 42rem;

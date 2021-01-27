@@ -46,6 +46,10 @@ const Logo = styled(motion.img)`
     width: 20rem;
   }
 
+  @media (max-height: 667px) {
+    width: 20rem;
+  }
+
   @media (min-width: 768px) {
     width: 26rem;
   }
@@ -66,6 +70,11 @@ const Loop = styled(motion.img)`
   @media (max-width: 330px) {
     width: 30rem;
     height: 30rem;
+  }
+
+  @media (max-height: 667px) {
+    width: 28rem;
+    height: 28rem;
   }
 
   @media (min-width: 768px) {

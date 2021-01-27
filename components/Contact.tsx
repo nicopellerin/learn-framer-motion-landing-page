@@ -47,6 +47,10 @@ const Title = styled.h2`
   color: #333;
   line-height: 1.1;
 
+  @media (max-height: 667px) {
+    font-size: 4.6rem;
+  }
+
   @media (min-width: 768px) {
     font-size: 6rem;
   }
