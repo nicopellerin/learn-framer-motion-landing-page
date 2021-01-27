@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <Wrapper>
-      <Image src="/images/logo_new.svg" alt="Logo" width={190} height={40} />
+      <Image src="/images/logo_new.svg" alt="Logo" width={200} height={40} />
       <Menu>
         <MenuList onMouseLeave={() => setIndex(null)}>
           <AnimateSharedLayout>

@@ -9,7 +9,7 @@ const NavbarMobile: React.FC<Props> = ({ setToggleDropdown }) => {
   return (
     <Wrapper>
       <Container>
-        <img src="/images/logo_new.svg" alt="logo" width={150} />
+        <img src="/images/logo_new.svg" alt="logo" width={160} />
         <div onClick={() => setToggleDropdown((prevState) => !prevState)}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <path
