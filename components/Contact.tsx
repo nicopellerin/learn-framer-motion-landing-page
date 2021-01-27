@@ -10,7 +10,16 @@ const Contact = () => {
         <Title>Say hi &mdash;</Title>
         <Tagline>
           Just wanna say hi or have any questions regarding the course? Hit me
-          up and I will get back to you asap &#128049;
+          up and I will get back to you asap &#128049; <br />
+          <br />
+          You can also follow me on Twitter @{' '}
+          <a
+            href="https://twitter.com/nicopellerin_io"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>nicopellerin_io</strong>
+          </a>
         </Tagline>
         <ContactForm />
       </Container>
