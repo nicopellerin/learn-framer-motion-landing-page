@@ -122,8 +122,12 @@ const DropdownList = styled(motion.ul)`
 const DropdownItem = styled(motion.li)`
   display: flex;
   justify-content: center;
-  font-size: 2.2rem;
+  font-size: 2rem;
   width: 100%;
+
+  @media (min-width: 768px) {
+    font-size: 2.2rem;
+  }
 
   &:not(:last-of-type) {
     padding-bottom: 3rem;
