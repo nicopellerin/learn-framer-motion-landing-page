@@ -218,7 +218,7 @@ const Info = styled(motion.div)`
 `
 
 const Title = styled(motion.h1)`
-  font-size: 5.2rem;
+  font-size: 6.2rem;
   background: -webkit-linear-gradient(45deg, #e39aff 1%, #61dafb 123.31%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -240,7 +240,7 @@ const Title = styled(motion.h1)`
 `
 
 const Tagline = styled(motion.h2)`
-  font-size: 2rem;
+  font-size: 2.4rem;
   background: -webkit-linear-gradient(45deg, #f1f1f1 1%, #f6deff 123.31%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -270,14 +270,14 @@ const Tagline = styled(motion.h2)`
 const Button = styled(motion.button)`
   border: none;
   padding: 1.4rem 2rem;
-  font-size: 2rem;
+  font-size: 2.2rem;
   border-radius: 0.5rem;
   font-weight: 600;
   background: linear-gradient(95.66deg, #61dafb 30.07%, #bb6bd9 104.98%);
   color: #333;
   cursor: pointer;
   position: relative;
-  z-index: 30;
+  z-index: 9000;
   box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.5);
   outline: none;
 
@@ -292,10 +292,10 @@ const Button = styled(motion.button)`
 
 const ManOne = styled(motion.img)`
   position: absolute;
-  z-index: 100;
+  z-index: 1;
   left: -3%;
   bottom: 1%;
-  width: 14rem;
+  width: 18rem;
   pointer-events: none;
 
   @media (min-width: 768px) {
@@ -324,10 +324,10 @@ const ManOne = styled(motion.img)`
 
 const WomanOne = styled(motion.img)`
   position: absolute;
-  z-index: 100;
+  z-index: 1;
   left: 3%;
   bottom: 0;
-  width: 20rem;
+  width: 24rem;
 
   @media (min-width: 768px) {
     left: 8%;
@@ -355,10 +355,10 @@ const WomanOne = styled(motion.img)`
 
 const ManTwo = styled(motion.img)`
   position: absolute;
-  z-index: 100;
-  right: -5%;
+  z-index: 1;
+  right: -4%;
   bottom: 1%;
-  width: 14rem;
+  width: 18rem;
 
   @media (min-width: 768px) {
     width: 32rem;
@@ -386,10 +386,10 @@ const ManTwo = styled(motion.img)`
 
 const WomanTwo = styled(motion.img)`
   position: absolute;
-  z-index: 100;
+  z-index: 1;
   right: 2%;
   bottom: 0;
-  width: 20rem;
+  width: 24rem;
 
   @media (min-width: 768px) {
     width: 42rem;

@@ -40,7 +40,7 @@ const LogoWrapper = styled.div`
 const Logo = styled(motion.img)`
   position: relative;
   z-index: 4;
-  width: 20rem;
+  width: 22rem;
 
   @media (min-width: 768px) {
     width: 26rem;
@@ -55,8 +55,8 @@ const Loop = styled(motion.img)`
   position: absolute;
   top: 50%;
   left: 65%;
-  width: 30rem;
-  height: 30rem;
+  width: 32rem;
+  height: 32rem;
   z-index: 3;
 
   @media (min-width: 768px) {
