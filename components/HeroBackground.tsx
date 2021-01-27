@@ -299,7 +299,6 @@ const ManOne = styled(motion.img)`
 
   @media (min-width: 1600px) {
     left: 0;
-    width: 48rem;
     bottom: 11%;
   }
 `
@@ -332,7 +331,6 @@ const WomanOne = styled(motion.img)`
   @media (min-width: 1600px) {
     left: 12%;
     bottom: 7%;
-    width: 60rem;
   }
 `
 
@@ -364,7 +362,6 @@ const ManTwo = styled(motion.img)`
   @media (min-width: 1600px) {
     right: 0;
     bottom: 8%;
-    width: 48rem;
   }
 `
 
@@ -396,7 +393,6 @@ const WomanTwo = styled(motion.img)`
   @media (min-width: 1600px) {
     right: 17%;
     bottom: 7%;
-    width: 58rem;
   }
 `
 
