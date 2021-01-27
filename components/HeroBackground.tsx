@@ -202,6 +202,10 @@ const Info = styled(motion.div)`
   transform: translate(-50%, -50%);
   width: 100%;
 
+  @media (max-width: 330px) {
+    top: 45%;
+  }
+
   @media (min-width: 768px) {
     top: 48%;
   }
@@ -224,10 +228,15 @@ const Title = styled(motion.h1)`
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 2.6rem;
-  font-family: 'Space Grotesk';
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   line-height: 1.05;
   text-align: center;
+
+  @media (max-width: 330px) {
+    font-size: 5.2rem;
+    margin-bottom: 2.6rem;
+  }
 
   @media (min-width: 768px) {
     font-size: 7.2rem;
@@ -251,6 +260,11 @@ const Tagline = styled(motion.h2)`
   font-family: 'Inter';
   line-height: 1.3;
   text-align: center;
+
+  @media (max-width: 330px) {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
 
   @media (min-width: 768px) {
     font-size: 2.4rem;
@@ -280,6 +294,10 @@ const Button = styled(motion.button)`
   z-index: 9000;
   box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.5);
   outline: none;
+
+  @media (max-width: 330px) {
+    font-size: 1.8rem;
+  }
 
   @media (min-width: 768px) {
     font-size: 2.2rem;

@@ -42,10 +42,14 @@ const Container = styled.div`
 `
 
 const Title = styled.h2`
-  font-size: 6rem;
+  font-size: 5.4rem;
   font-family: 'Space Grotesk', sans-serif;
   color: #333;
   line-height: 1.1;
+
+  @media (min-width: 768px) {
+    font-size: 6rem;
+  }
 `
 
 const Tagline = styled.h3`

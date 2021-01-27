@@ -85,16 +85,20 @@ const Container = styled.div`
 `
 
 const Title = styled.h2`
-  font-size: 6rem;
+  font-size: 5.4rem;
   font-family: 'Space Grotesk', sans-serif;
   color: #333;
   line-height: 1.1;
+
+  @media (min-width: 768px) {
+    font-size: 6rem;
+  }
 `
 
 const Text = styled.p`
   font-size: 2rem;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.6;
 `
 
 const List = styled.ul`
@@ -104,7 +108,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   font-size: 2rem;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.8;
 `
 
 const Wave = styled(motion.svg)`
