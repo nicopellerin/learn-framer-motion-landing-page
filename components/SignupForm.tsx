@@ -45,8 +45,8 @@ const SignupForm = () => {
     <Wrapper id="sign-up">
       <Title>Coming soon.</Title>
       <Tagline>
-        Sign up to receive updates and a <Discount>40% discount</Discount> on
-        this course! 🎉
+        Sign up to receive updates, free animation tips and a{' '}
+        <Discount>40% discount</Discount> on this course! 🎉
       </Tagline>
       <StyledForm onSubmit={handleSubscribe}>
         <Input
@@ -132,13 +132,13 @@ const Tagline = styled.h3`
   line-height: 1.4;
   font-weight: 400;
   letter-spacing: 1.1px;
-  max-width: 31ch;
+  max-width: 34ch;
   margin: 0 auto;
   margin-bottom: 3.2rem;
 
   @media (min-width: 450px) {
     font-size: 2.4rem;
-    max-width: 100%;
+    max-width: 45ch;
   }
 `
 

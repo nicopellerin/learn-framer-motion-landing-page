@@ -137,7 +137,7 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
                   animate={{ y: 0, rotateX: 0, opacity: 1 }}
                   transition={{ type: 'spring', damping: 20, delay: 2 }}
                 >
-                  <Savings>Save 40%</Savings>
+                  <Savings>Get 40% off coupon</Savings>
                 </SavingsWrapper>
               </div>
             </motion.span>
@@ -302,7 +302,7 @@ const Tagline = styled(motion.h2)`
 
 const Button = styled(motion.button)`
   border: none;
-  padding: 1.4rem 2rem;
+  padding: 1.4rem 3.2rem;
   font-size: 2.2rem;
   border-radius: 0.5rem;
   font-weight: 600;
@@ -473,7 +473,7 @@ const SavingsWrapper = styled(motion.div)`
   top: -2px;
   left: 50%;
   position: relative;
-  width: 16rem;
+  width: 18rem;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -490,6 +490,7 @@ const Savings = styled(motion.span)`
   border-bottom-right-radius: 0.5rem;
   color: rebeccapurple;
   box-shadow: 0 0 10px 5px rgba(89, 86, 213, 0.3);
+  white-space: nowrap;
 `
 
 // const WatchVideoButton = styled(motion.button)`
