@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { FaTwitter } from 'react-icons/fa'
 
 import ContactForm from './ContactForm'
 
@@ -12,14 +13,18 @@ const Contact = () => {
           Just wanna say hi or have any questions regarding the course? Hit me
           up and I will get back to you asap &#128049; <br />
           <br />
-          You can also follow me on Twitter @{' '}
-          <a
+          You can also follow me on{' '}
+          <Twit>
+            Twitter <FaTwitter style={{ marginLeft: 5, fontSize: '2rem' }} />
+          </Twit>{' '}
+          @{' '}
+          <StyledA
             href="https://twitter.com/nicopellerin_io"
             target="_blank"
             rel="noopener noreferrer"
           >
             <strong>nicopellerin_io</strong>
-          </a>
+          </StyledA>
         </Tagline>
         <ContactForm />
       </Container>
@@ -75,4 +80,15 @@ const Tagline = styled.h3`
   @media (max-width: 500px) {
     line-height: 1.5em;
   }
+`
+
+const StyledA = styled.a`
+  color: #333;
+`
+
+const Twit = styled.span`
+  color: #1da1f2;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
 `
