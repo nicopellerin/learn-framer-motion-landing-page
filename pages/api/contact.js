@@ -16,6 +16,7 @@ export default async (req, res) => {
   const msg = {
     to: process.env.SENDGRID_EMAIL,
     from: process.env.SENDGRID_EMAIL,
+    replyTo: email,
     subject: `Contact form - LearnFramerMotion: ${subject}`,
     html: html,
   }
