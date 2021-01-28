@@ -481,7 +481,7 @@ const SavingsWrapper = styled(motion.div)`
   top: -1px;
   left: 50%;
   position: relative;
-  width: 18rem;
+  width: 16rem;
   display: flex;
   justify-content: center;
   text-align: center;
