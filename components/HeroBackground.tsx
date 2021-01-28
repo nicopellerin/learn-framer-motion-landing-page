@@ -128,21 +128,13 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
                 delay: 0.5,
               }}
             >
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  width: '100%',
-                }}
-              >
+              <div style={{ position: 'relative' }}>
                 <Button whileHover={{ y: -1 }} whileTap={{ y: 1 }}>
                   Sign up today!
                 </Button>
                 <SavingsWrapper
-                  initial={{ y: -30, x: '-50%', rotateX: 145 }}
-                  animate={{ y: 0, rotateX: 0 }}
-                  exit={{ y: -35, rotateX: 90 }}
+                  initial={{ y: -20, x: '-50%', rotateX: 45, opacity: 0 }}
+                  animate={{ y: 0, rotateX: 0, opacity: 1 }}
                   transition={{ type: 'spring', damping: 20, delay: 2 }}
                 >
                   <Savings>Save 40%</Savings>
@@ -318,7 +310,7 @@ const Button = styled(motion.button)`
   color: #333;
   cursor: pointer;
   position: relative;
-  z-index: 9000;
+  z-index: 900;
   box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.7);
   outline: none;
 
@@ -478,13 +470,14 @@ const WomanTwo = styled(motion.img)`
 
 const SavingsWrapper = styled(motion.div)`
   position: absolute;
-  top: -1px;
+  top: -2px;
   left: 50%;
   position: relative;
   width: 16rem;
   display: flex;
   justify-content: center;
   text-align: center;
+  z-index: 10;
 `
 
 const Savings = styled(motion.span)`
