@@ -44,7 +44,10 @@ const SignupForm = () => {
   return (
     <Wrapper id="sign-up">
       <Title>Coming soon.</Title>
-      <Tagline>Sign up to receive updates on this course! 🎉</Tagline>
+      <Tagline>
+        Sign up to receive updates and a <Discount>40% discount</Discount> on
+        this course! 🎉
+      </Tagline>
       <StyledForm onSubmit={handleSubscribe}>
         <Input
           type="email"
@@ -129,10 +132,13 @@ const Tagline = styled.h3`
   line-height: 1.4;
   font-weight: 400;
   letter-spacing: 1.1px;
+  max-width: 31ch;
+  margin: 0 auto;
   margin-bottom: 3.2rem;
 
   @media (min-width: 450px) {
     font-size: 2.4rem;
+    max-width: 100%;
   }
 `
 
@@ -219,4 +225,9 @@ const MessageError = styled(motion.span)`
   color: red;
   display: flex;
   align-items: center;
+`
+
+const Discount = styled.span`
+  font-weight: 700;
+  color: #f6deff;
 `
