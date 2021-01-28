@@ -185,7 +185,7 @@ const Button = styled(motion.button)`
   cursor: pointer;
   position: relative;
   z-index: 30;
-  box-shadow: 0 0 10px 3px rgba(89, 86, 213, 0.2);
+  box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.7);
   width: 100%;
   outline: none;
 

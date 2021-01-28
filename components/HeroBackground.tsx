@@ -128,9 +128,26 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
                 delay: 0.5,
               }}
             >
-              <Button whileHover={{ y: -1 }} whileTap={{ y: 1 }}>
-                Sign up!
-              </Button>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  width: '100%',
+                }}
+              >
+                <Button whileHover={{ y: -1 }} whileTap={{ y: 1 }}>
+                  Sign up today!
+                </Button>
+                <SavingsWrapper
+                  initial={{ y: -30, x: '-50%', rotateX: 145 }}
+                  animate={{ y: 0, rotateX: 0 }}
+                  exit={{ y: -35, rotateX: 90 }}
+                  transition={{ type: 'spring', damping: 20, delay: 2 }}
+                >
+                  <Savings>Save 40%</Savings>
+                </SavingsWrapper>
+              </div>
             </motion.span>
           </Link>
         </Info>
@@ -302,7 +319,7 @@ const Button = styled(motion.button)`
   cursor: pointer;
   position: relative;
   z-index: 9000;
-  box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.5);
+  box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.7);
   outline: none;
 
   @media (max-width: 330px) {
@@ -459,26 +476,28 @@ const WomanTwo = styled(motion.img)`
   }
 `
 
-// const SavingsWrapper = styled(motion.div)`
-//   position: relative;
-//   width: 20rem;
-//   display: flex;
-//   justify-content: center;
-//   text-align: center;
-// `
+const SavingsWrapper = styled(motion.div)`
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  position: relative;
+  width: 18rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`
 
-// const Savings = styled(motion.span)`
-//   background: rgba(244, 244, 244, 1);
-//   position: absolute;
-//   width: 100%;
-//   font-size: 1.6rem;
-//   padding: 0.5rem;
-//   font-weight: 600;
-//   border-bottom-left-radius: 0.5rem;
-//   border-bottom-right-radius: 0.5rem;
-//   color: rebeccapurple;
-//   box-shadow: 0 0 10px 5px rgba(89, 86, 213, 0.3);
-// `
+const Savings = styled(motion.span)`
+  background: rgba(244, 244, 244, 1);
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  font-weight: 600;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  color: rebeccapurple;
+  box-shadow: 0 0 10px 5px rgba(89, 86, 213, 0.3);
+`
 
 // const WatchVideoButton = styled(motion.button)`
 //   z-index: 30;
