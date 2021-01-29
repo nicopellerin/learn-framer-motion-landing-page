@@ -75,7 +75,7 @@ const WhatYouWillLearn = () => {
         </Text>
         <Text>
           You will also learn on how to use <strong>Framer Motion</strong> with
-          a CSS-in-JS libraries such as <strong>styled-components</strong>.
+          CSS-in-JS libraries such as <strong>styled-components</strong>.
         </Text>
         <Text>
           By the way, all the animations on this website are done using only{' '}

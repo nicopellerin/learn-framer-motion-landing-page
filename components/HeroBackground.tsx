@@ -137,7 +137,7 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
                   animate={{ y: 0, rotateX: 0, opacity: 1 }}
                   transition={{ type: 'spring', damping: 20, delay: 2 }}
                 >
-                  <Savings>Get 40% off coupon</Savings>
+                  <Savings>Get 60% off coupon</Savings>
                 </SavingsWrapper>
               </div>
             </motion.span>

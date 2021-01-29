@@ -46,7 +46,7 @@ const SignupForm = () => {
       <Title>Coming soon.</Title>
       <Tagline>
         Sign up to receive updates, free animation tips and a{' '}
-        <Discount>40% discount</Discount> on this course! 🎉
+        <Discount>60% discount</Discount> on this course! 🎉
       </Tagline>
       <StyledForm onSubmit={handleSubscribe}>
         <Input
