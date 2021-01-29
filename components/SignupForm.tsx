@@ -2,7 +2,7 @@ import * as React from 'react'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { FaExclamationCircle } from 'react-icons/fa'
+import { FaExclamationCircle, FaDiscord } from 'react-icons/fa'
 import { Circle } from 'better-react-spinkit'
 
 const SignupForm = () => {
@@ -69,6 +69,15 @@ const SignupForm = () => {
             'Sign up'
           )}
         </Button>
+        {!errMessage && !successMessage && (
+          <DiscordMessage>
+            + access to a private
+            <DiscordColorText>
+              Discord <FaDiscord style={{ margin: '0 0.5rem 0 0.2rem' }} />
+            </DiscordColorText>{' '}
+            server!
+          </DiscordMessage>
+        )}
         {(errMessage || successMessage) && (
           <Messages initial={{ x: '-50%', y: 10 }} animate={{ y: 0 }}>
             {errMessage && (
@@ -231,4 +240,28 @@ const MessageError = styled(motion.span)`
 const Discount = styled.span`
   font-weight: 700;
   color: #f6deff;
+`
+
+const DiscordMessage = styled.span`
+  position: absolute;
+  bottom: -5.5rem;
+  color: #f6deff;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  font-weight: 600;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    bottom: -4.5rem;
+  }
+`
+
+const DiscordColorText = styled.span`
+  color: #7289da;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.4rem;
 `
