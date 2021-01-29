@@ -57,7 +57,7 @@ const Container = styled.div`
   }
 
   @media (min-width: 1024px) {
-    padding: 4rem 3rem 20rem;
+    padding: 4rem 3rem 24rem;
   }
 
   @media (min-width: 1800) {
