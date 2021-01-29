@@ -244,7 +244,7 @@ const Discount = styled.span`
 
 const DiscordMessage = styled.span`
   position: absolute;
-  bottom: -5.5rem;
+  bottom: -5rem;
   color: #f6deff;
   left: 50%;
   transform: translateX(-50%);
