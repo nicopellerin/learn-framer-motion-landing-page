@@ -121,7 +121,8 @@ const Welcome = styled.h3`
 
 const Wave = styled(motion.svg)`
   position: absolute;
-  width: 101%;
+  width: 100vw;
+
   bottom: -1px;
   z-index: 3103;
 

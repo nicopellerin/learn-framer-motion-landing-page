@@ -160,9 +160,10 @@ const ListItem = styled.li`
 
 const Wave = styled(motion.svg)`
   position: absolute;
-  width: 101%;
+  width: 100vw;
   bottom: -1px;
   z-index: 3103;
+  overflow: hidden;
 
   @media (min-width: 1024px) {
     bottom: -30px;
