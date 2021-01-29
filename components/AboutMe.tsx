@@ -12,13 +12,13 @@ const AboutMe = () => {
           <div>
             <Welcome>Hi! I'm Nico &#128400; </Welcome>
             <Text>
-              Based out of Montreal, Canada, I'm a developer with a passion for
-              all things tech. Currently employed as an application developer, I
-              enjoy continually learning new concepts and staying up-to-date
-              with the latest tech in this fast-paced environment. When not
-              coding, I love to produce electronic music, as well as design
-              stuff. I also recently took an interest in creating audio VST
-              plugins.
+              I will be your instructor for this course. Based out of Montreal,
+              Canada, I'm a developer with a passion for all things tech.
+              Currently employed as an application developer, I enjoy
+              continually learning new concepts and staying up-to-date with the
+              latest tech in this fast-paced environment. When not coding, I
+              love to produce electronic music, as well as design stuff. I also
+              recently took an interest in creating audio VST plugins.
             </Text>
           </div>
         </Info>
