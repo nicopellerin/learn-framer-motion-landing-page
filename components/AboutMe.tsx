@@ -57,11 +57,11 @@ const Container = styled.div`
   }
 
   @media (min-width: 1024px) {
-    padding: 4rem 3rem 24rem;
+    padding: 4rem 3rem 22rem;
   }
 
-  @media (min-width: 1800) {
-    padding: 5rem 3rem 27rem;
+  @media (min-width: 1800px) {
+    padding: 6rem 3rem 27rem;
   }
 `
 
