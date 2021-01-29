@@ -69,6 +69,12 @@ const DropdownMobile: FC<Props> = ({ setToggleDropdown }) => {
             variants={itemVariants}
             onClick={() => setToggleDropdown(false)}
           >
+            <LinkStyled href="#about-me">About me</LinkStyled>
+          </DropdownItem>
+          <DropdownItem
+            variants={itemVariants}
+            onClick={() => setToggleDropdown(false)}
+          >
             <LinkStyled href="#what-you-will-learn">
               What you will learn
             </LinkStyled>
@@ -101,7 +107,7 @@ export default DropdownMobile
 // Styles
 const DropdownWrapper = styled(motion.div)`
   position: absolute;
-  height: 23rem;
+  height: 32rem;
   width: 100%;
   background: #010101;
   bottom: 0;
@@ -150,7 +156,7 @@ const CloseWrapper = styled(motion.div)`
   border-radius: 50%;
   background: #010101;
   position: absolute;
-  bottom: 27rem;
+  bottom: 36rem;
   left: 50%;
   display: flex;
   justify-content: center;

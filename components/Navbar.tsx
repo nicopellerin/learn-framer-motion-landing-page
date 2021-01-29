@@ -5,6 +5,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 
 const links: Link[] = [
+  { text: 'About me', link: '#about-me' },
   { text: 'What you will learn', link: '#what-you-will-learn' },
   { text: 'Contact', link: '#contact' },
 ]

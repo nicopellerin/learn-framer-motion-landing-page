@@ -102,11 +102,12 @@ const Wrapper = styled(motion.div)`
   box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.2);
   border-top: 2px solid #f4f4f4;
   border-bottom: 2px solid #f4f4f4;
+  box-shadow: 0 0 35px 10px rgba(89, 86, 213, 0.5);
 
   @media (min-width: 450px) {
     border-radius: 0.5rem;
     padding: 5rem 0rem 7rem;
-    scroll-margin-top: 40em;
+    scroll-margin-top: 30em;
     border: 2px solid #f4f4f4;
     margin: 6rem 0rem 4rem;
   }

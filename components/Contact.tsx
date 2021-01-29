@@ -13,7 +13,7 @@ const Contact = () => {
           Just wanna say hi or have any questions regarding the course? Hit me
           up and I will get back to you asap &#128049; <br />
           <br />
-          You can also follow me on{' '}
+          You can also find me on{' '}
           <Twit>
             Twitter <FaTwitter style={{ marginLeft: 5, fontSize: '2rem' }} />
           </Twit>{' '}
@@ -36,7 +36,7 @@ export default Contact
 
 // Styles
 const Wrapper = styled.div`
-  background: #fff;
+  background: #eef;
   position: relative;
   z-index: 3000;
 `
@@ -47,7 +47,7 @@ const Container = styled.div`
   margin: 0 auto;
 
   @media (min-width: 1024px) {
-    padding: 2rem 0 14rem;
+    padding: 6rem 0 14rem;
   }
 
   @media (max-width: 1100px) {

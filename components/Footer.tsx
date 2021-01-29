@@ -21,7 +21,7 @@ export default Footer
 
 // Styles
 const Wrapper = styled.footer`
-  background: #fff;
+  background: #eef;
 `
 
 const Container = styled.div`

@@ -57,7 +57,7 @@ body {
   height: 100%;
   min-height: 100%;
   font-family: var(--systemFont);
-  color: #555;
+  color: #333;
   background: #101010;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

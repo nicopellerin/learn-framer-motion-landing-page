@@ -232,7 +232,7 @@ const Label = styled.label`
 `
 
 const InputField = styled.input`
-  border: 1px solid #eef;
+  border: 1px solid #ccc;
   color: #333;
   background: ghostwhite;
   padding: 0.8em 0.5em;
@@ -244,7 +244,7 @@ const InputField = styled.input`
 `
 
 const TextareaField = styled.textarea`
-  border: 1px solid #eef;
+  border: 1px solid #ccc;
   color: #333;
   background: ghostwhite;
   padding: 0.8em 0.5em;
