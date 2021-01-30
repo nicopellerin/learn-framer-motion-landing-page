@@ -56,7 +56,7 @@ const DropdownMobile: FC<Props> = ({ setToggleDropdown }) => {
       <DropdownWrapper
         initial={{ y: 230, x: '-50%' }}
         animate={{ y: 0 }}
-        exit={{ y: 230 }}
+        exit={{ y: 270 }}
         transition={{ type: 'spring', damping: 18 }}
       >
         <DropdownList
