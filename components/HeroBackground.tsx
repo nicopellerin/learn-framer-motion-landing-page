@@ -28,13 +28,6 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
   return (
     <>
       <Wrapper>
-        <Image
-          src="/images/bg.jpg"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          alt="Background"
-        />
         <Info>
           <LoopLogo />
           <Title
@@ -200,6 +193,9 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background: url('/images/bg.jpg');
+  background-size: cover;
+  background-position-y: center;
 `
 
 const Info = styled(motion.div)`
