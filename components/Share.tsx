@@ -100,15 +100,16 @@ const ShareText = styled.span`
   text-align: center;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #555;
-  margin-bottom: 1.2rem;
+  color: rebeccapurple;
+  margin-bottom: 1.1rem;
   position: relative;
+  letter-spacing: 1px;
 
   &:after {
     content: '';
     width: 1px;
-    height: 7px;
-    background: #aaa;
+    height: 6px;
+    background: rebeccapurple;
     position: absolute;
     left: 27px;
     bottom: -7px;
@@ -118,8 +119,8 @@ const ShareText = styled.span`
   &:before {
     content: '';
     width: 1px;
-    height: 7px;
-    background: #aaa;
+    height: 6px;
+    background: rebeccapurple;
     position: absolute;
     right: 27px;
     bottom: -7px;
