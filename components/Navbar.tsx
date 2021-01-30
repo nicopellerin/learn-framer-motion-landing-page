@@ -25,28 +25,28 @@ const Navbar = () => {
         <MenuList onMouseLeave={() => setIndex(null)}>
           <AnimateSharedLayout>
             {links.map(({ text, link }, i) => (
-              <Link href={link} key={link}>
-                <StyledLink>
-                  <MenuListItem onMouseOver={() => setIndex(i)}>
+              <MenuListItem onMouseOver={() => setIndex(i)}>
+                <Link href={link} key={link}>
+                  <StyledLink>
                     {text}
-                  </MenuListItem>
-                  {index === i && (
-                    <motion.div
-                      layoutId="menuItem"
-                      initial={{ y: 1 }}
-                      animate={{ y: 0 }}
-                      style={{
-                        position: 'absolute',
-                        width: '100%',
-                        height: '0.3rem',
-                        background: '#F6DEFF',
-                        bottom: '-1.1rem',
-                        borderRadius: '0.5rem',
-                      }}
-                    />
-                  )}
-                </StyledLink>
-              </Link>
+                    {index === i && (
+                      <motion.div
+                        layoutId="menuItem"
+                        initial={{ y: 1 }}
+                        animate={{ y: 0 }}
+                        style={{
+                          position: 'absolute',
+                          width: '100%',
+                          height: '0.3rem',
+                          background: '#F6DEFF',
+                          bottom: '-1.1rem',
+                          borderRadius: '0.5rem',
+                        }}
+                      />
+                    )}
+                  </StyledLink>
+                </Link>
+              </MenuListItem>
             ))}
           </AnimateSharedLayout>
         </MenuList>
@@ -96,12 +96,7 @@ const MenuListItem = styled.li`
   font-size: 2rem;
   color: rgba(244, 244, 244, 0.9);
   cursor: pointer;
-`
-
-const StyledLink = styled.a`
   position: relative;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 500;
 
   &:not(:last-child) {
     margin-right: 5rem;
@@ -116,4 +111,10 @@ const StyledLink = styled.a`
       top: 0;
     }
   }
+`
+
+const StyledLink = styled.a`
+  position: relative;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
 `
