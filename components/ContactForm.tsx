@@ -188,7 +188,7 @@ const ContactForm = () => {
       </div>
       <div>
         <Dog3D
-          src="/images/dog-3d2.png"
+          src="/images/dog-3d2.webp"
           alt="Dog"
           animate={{ y: [5, 0, 5] }}
           transition={{ duration: 5, repeat: Infinity, repeatType: 'reverse' }}
