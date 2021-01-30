@@ -47,7 +47,7 @@ const Wrapper = styled(motion.div)`
   top: 6rem;
   z-index: 9000;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     right: unset;
     left: 0rem;
     top: 50%;
@@ -66,7 +66,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     flex-direction: column;
     align-items: center;
   }
@@ -78,7 +78,7 @@ const Facebook = styled(FacebookIcon)`
   height: 4.5rem;
   margin-right: 1.8rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     margin-right: 0;
     margin-bottom: 1.2rem;
     box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.2);
@@ -90,7 +90,7 @@ const Twitter = styled(TwitterIcon)`
   width: 4.5rem;
   height: 4.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.2);
   }
 `
@@ -127,7 +127,7 @@ const ShareText = styled.span`
     transform: rotate(-45deg);
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     &:after,
     &:before {
       display: none;
