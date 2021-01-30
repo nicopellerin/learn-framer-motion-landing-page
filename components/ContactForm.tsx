@@ -192,6 +192,7 @@ const ContactForm = () => {
           alt="Dog"
           animate={{ y: [5, 0, 5] }}
           transition={{ duration: 5, repeat: Infinity, repeatType: 'reverse' }}
+          loading="lazy"
         />
       </div>
     </FormWrapper>
