@@ -1,5 +1,4 @@
 import React, { useState, Dispatch, SetStateAction, FC } from 'react'
-import Image from 'next/image'
 import styled from 'styled-components'
 import { AnimatePresence, motion } from 'framer-motion'
 // import { FaTv } from 'react-icons/fa'
