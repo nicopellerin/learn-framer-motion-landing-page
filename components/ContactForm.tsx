@@ -187,7 +187,12 @@ const ContactForm = () => {
         </AnimatePresence>
       </div>
       <div>
-        <Dog3D src="/images/dog-3d2.png" alt="Dog" />
+        <Dog3D
+          src="/images/dog-3d2.png"
+          alt="Dog"
+          animate={{ y: [5, 0, 5] }}
+          transition={{ duration: 5, repeat: Infinity, repeatType: 'reverse' }}
+        />
       </div>
     </FormWrapper>
   )
@@ -200,7 +205,7 @@ const FormWrapper = styled.form`
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
-  gap: 6rem;
+  gap: 7rem;
   position: relative;
   z-index: 3000;
 
@@ -323,7 +328,7 @@ const SuccessEmoji = styled.span`
   margin-bottom: 2rem;
 `
 
-const Dog3D = styled.img`
+const Dog3D = styled(motion.img)`
   max-width: 95%;
 
   @media (min-width: 1024px) {
