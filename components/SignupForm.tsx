@@ -1,15 +1,11 @@
 import * as React from 'react'
-import { useState, FC } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { FaExclamationCircle, FaDiscord } from 'react-icons/fa'
 import { Circle } from 'better-react-spinkit'
 
-interface Props {
-  ref: any
-}
-
-const SignupForm: FC<Props> = ({ ref }) => {
+const SignupForm = () => {
   const [email, setEmail] = useState('')
   const [isSending, setIsSending] = useState(false)
   const [errMessage, setErrMessage] = useState('')
@@ -58,7 +54,6 @@ const SignupForm: FC<Props> = ({ ref }) => {
           placeholder="Your email"
           value={email}
           onChange={(e) => setEmail(e.currentTarget.value)}
-          ref={ref}
         />
         <Button
           whileHover={{ y: isSending ? 0 : -1 }}
