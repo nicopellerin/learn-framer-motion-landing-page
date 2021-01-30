@@ -46,7 +46,7 @@ const SignupForm = () => {
       <Title>Coming soon.</Title>
       <Tagline>
         Sign up to receive updates, free animation tips and a{' '}
-        <Discount>60% discount</Discount> on this course! 🎉
+        <Discount>60% off promo code</Discount> when the course is released! 🎉
       </Tagline>
       <StyledForm onSubmit={handleSubscribe}>
         <Input
@@ -152,7 +152,7 @@ const Tagline = styled.h3`
 
   @media (min-width: 450px) {
     font-size: 2.4rem;
-    max-width: 45ch;
+    max-width: 50ch;
   }
 `
 
