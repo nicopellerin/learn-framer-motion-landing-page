@@ -3,10 +3,12 @@ import styled from 'styled-components'
 import { FaTwitter } from 'react-icons/fa'
 
 import ContactForm from './ContactForm'
+import Share from './Share'
 
 const Contact = () => {
   return (
     <Wrapper id="contact">
+      <Share />
       <Container>
         <Title>Say hi &mdash;</Title>
         <Tagline>

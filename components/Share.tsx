@@ -1,0 +1,102 @@
+import * as React from 'react'
+import styled from 'styled-components'
+import { motion } from 'framer-motion'
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+} from 'react-share'
+
+const Share = () => {
+  return (
+    <Wrapper
+      initial={{ x: -200, y: '-50%' }}
+      animate={{ x: 0 }}
+      transition={{ type: 'spring', damping: 16 }}
+    >
+      <ShareText>Share</ShareText>
+      <Container>
+        <motion.span
+          whileHover={{ scale: 1.03, rotate: [0, 3, 0] }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <FacebookShareButton url="https://learnframermotion.com">
+            <Facebook />
+          </FacebookShareButton>
+        </motion.span>
+        <motion.span
+          whileHover={{ scale: 1.03, rotate: [0, 3, 0] }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <TwitterShareButton url="https://learnframermotion.com">
+            <Twitter />
+          </TwitterShareButton>
+        </motion.span>
+      </Container>
+    </Wrapper>
+  )
+}
+
+export default Share
+
+// Styles
+const Wrapper = styled(motion.div)`
+  position: absolute;
+  right: 4rem;
+  top: 6rem;
+  z-index: 9000;
+
+  @media (min-width: 768px) {
+    right: unset;
+    left: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.4rem 1.6rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.2);
+    border: 1px solid #ccc;
+    border-left: none;
+  }
+`
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`
+
+const Facebook = styled(FacebookIcon)`
+  border-radius: 50%;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-right: 1.5rem;
+  box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.2);
+
+  @media (min-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 1.2rem;
+  }
+`
+
+const Twitter = styled(TwitterIcon)`
+  border-radius: 50%;
+  width: 4.5rem;
+  height: 4.5rem;
+  box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.2);
+`
+
+const ShareText = styled.span`
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 1.2rem;
+`

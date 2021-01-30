@@ -41,11 +41,11 @@ export default class MyDocument extends Document {
           <meta name="og:url" content="https://learnframermotion.com" />
           <meta
             name="description"
-            content="Interactive + video course that teaches you all things animation using the powerful React library Framer Motion."
+            content="Interactive video course that teaches you all things animation using the powerful React library Framer Motion."
           />
           <meta
             name="og:description"
-            content="Interactive + video course that teaches you all things animation using the powerful React library Framer Motion.
+            content="Interactive video course that teaches you all things animation using the powerful React library Framer Motion.
             "
           />
           <meta name="og:image" content="/images/og-image.jpg" />
