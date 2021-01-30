@@ -4,11 +4,14 @@ import { motion } from 'framer-motion'
 
 const LoopLogo = () => (
   <LogoWrapper>
-    <Loop
-      src="/images/loop2.png"
-      initial={{ y: '-50%', x: '-50%' }}
-      alt="Loop"
-    />
+    <picture>
+      <source srcSet="images/loop2.webp" type="image/webp" />
+      <Loop
+        src="/images/loop2.png"
+        initial={{ y: '-50%', x: '-50%' }}
+        alt="Loop"
+      />
+    </picture>
     <Logo
       src="/images/react-logo.png"
       animate={{ y: [0, 3, 0], rotate: [3, 0, -3] }}

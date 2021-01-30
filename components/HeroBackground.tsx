@@ -136,34 +136,46 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
             </motion.span>
           </Link>
         </Info>
-        <ManOne
-          src="/images/white_man_3d.png"
-          initial={{ y: 500 }}
-          animate={{ y: 0 }}
-          transition={{ type: 'spring', damping: 20, delay: 0.7 }}
-          alt="Man 1"
-        />
-        <WomanOne
-          src="/images/black_girl_3d.png"
-          initial={{ y: 500 }}
-          animate={{ y: 0 }}
-          transition={{ type: 'spring', damping: 20, delay: 0.9 }}
-          alt="Woman 1"
-        />
-        <ManTwo
-          src="/images/black_man_3d-2.png"
-          initial={{ y: 500 }}
-          animate={{ y: 0 }}
-          transition={{ type: 'spring', damping: 20, delay: 1.1 }}
-          alt="Man 2"
-        />
-        <WomanTwo
-          src="/images/white_girl_3d.png"
-          initial={{ y: 500 }}
-          animate={{ y: 0 }}
-          transition={{ type: 'spring', damping: 20, delay: 1.3 }}
-          alt="Woman 2"
-        />
+        <picture>
+          <source srcSet="/images/white_man_3d.webp" type="image/webp" />
+          <ManOne
+            src="/images/white_man_3d.png"
+            alt="Man 1"
+            initial={{ y: 500 }}
+            animate={{ y: 0 }}
+            transition={{ type: 'spring', damping: 20, delay: 0.7 }}
+          />
+        </picture>
+        <picture>
+          <source srcSet="images/black_girl_3d.webp" type="image/webp" />
+          <WomanOne
+            src="/images/black_girl_3d.png"
+            initial={{ y: 500 }}
+            animate={{ y: 0 }}
+            transition={{ type: 'spring', damping: 20, delay: 0.9 }}
+            alt="Woman 1"
+          />
+        </picture>
+        <picture>
+          <source srcSet="images/black_man_3d-2.webp" type="image/webp" />
+          <ManTwo
+            src="/images/black_man_3d-2.png"
+            initial={{ y: 500 }}
+            animate={{ y: 0 }}
+            transition={{ type: 'spring', damping: 20, delay: 1.1 }}
+            alt="Man 2"
+          />
+        </picture>
+        <picture>
+          <source srcSet="/images/white_girl_3d.webp" type="image/webp" />
+          <WomanTwo
+            src="/images/white_girl_3d.png"
+            initial={{ y: 500 }}
+            animate={{ y: 0 }}
+            transition={{ type: 'spring', damping: 20, delay: 1.3 }}
+            alt="Woman 2"
+          />
+        </picture>
       </Wrapper>
       <AnimatePresence>
         {toggleDropdown && (
