@@ -5,9 +5,9 @@ import { motion } from 'framer-motion'
 const LoopLogo = () => (
   <LogoWrapper>
     <picture>
-      <source srcSet="images/loop2.webp" type="image/webp" />
+      <source srcSet="images/loop3.webp" type="image/webp" />
       <Loop
-        src="/images/loop2.png"
+        src="/images/loop3.png"
         initial={{ y: '-50%', x: '-50%' }}
         alt="Loop"
       />
@@ -73,6 +73,7 @@ const Loop = styled(motion.img)`
   width: 32rem;
   height: 32rem;
   z-index: 3;
+  opacity: 0.6;
 
   @media (max-width: 330px) {
     width: 30rem;

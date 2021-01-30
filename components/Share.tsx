@@ -56,7 +56,7 @@ const Wrapper = styled(motion.div)`
     padding: 1.8rem 1.6rem;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
-    box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.15);
+    box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.1);
     border: 1px solid #ccc;
     border-left: none;
   }
@@ -81,7 +81,7 @@ const Facebook = styled(FacebookIcon)`
   @media (min-width: 1200px) {
     margin-right: 0;
     margin-bottom: 1.2rem;
-    box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.2);
+    box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.15);
   }
 `
 
@@ -91,7 +91,7 @@ const Twitter = styled(TwitterIcon)`
   height: 4.5rem;
 
   @media (min-width: 1200px) {
-    box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.2);
+    box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.15);
   }
 `
 
