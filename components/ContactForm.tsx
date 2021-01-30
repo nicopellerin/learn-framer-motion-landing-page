@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FiSend, FiAlertTriangle } from 'react-icons/fi'
 import axios from 'axios'
 import { useMedia } from 'react-use-media'
+import Dog from './Dog'
 
 const ContactForm = () => {
   const [name, setName] = useState('')
@@ -65,7 +66,7 @@ const ContactForm = () => {
 
   return (
     <FormWrapper onSubmit={handleSubmit}>
-      <div>
+      <div style={{ position: 'relative' }}>
         <input
           ref={hiddenRef}
           type="hidden"
@@ -187,13 +188,7 @@ const ContactForm = () => {
         </AnimatePresence>
       </div>
       <div>
-        <Dog3D
-          src="/images/dog-3d2.webp"
-          alt="Dog"
-          animate={{ y: [5, 0, 5] }}
-          transition={{ duration: 5, repeat: Infinity, repeatType: 'reverse' }}
-          loading="lazy"
-        />
+        <Dog />
       </div>
     </FormWrapper>
   )
@@ -327,12 +322,4 @@ const SuccessEmoji = styled.span`
   font-size: 5rem;
   display: block;
   margin-bottom: 2rem;
-`
-
-const Dog3D = styled(motion.img)`
-  max-width: 95%;
-
-  @media (min-width: 1024px) {
-    max-width: 100%;
-  }
 `
