@@ -89,13 +89,12 @@ const StyledA = styled.a`
 `
 
 const Twit = styled.span`
-  color: #0aa1f0;
+  color: #f4f4f4;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.3);
-  padding: 0.3rem 0.7rem;
+  background: #0aa1f0;
+  padding: 0.45rem 0.75rem;
   border-radius: 0.5rem;
   line-height: 1;
-  /* border: 1px solid rgba(10, 161, 240, 0.3); */
 `

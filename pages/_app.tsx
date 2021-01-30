@@ -4,8 +4,9 @@ import Head from 'next/head'
 
 import 'typeface-inter'
 import '@fontsource/space-grotesk/700.css'
+import '@fontsource/space-grotesk/600.css'
 import '@fontsource/space-grotesk/500.css'
-import '../styles/prism-shades-of-purple.css'
+// import '../styles/prism-shades-of-purple.css'
 
 import GlobalStyles from '../styles/GlobalStyles'
 
