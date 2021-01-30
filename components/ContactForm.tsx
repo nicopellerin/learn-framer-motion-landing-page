@@ -65,126 +65,130 @@ const ContactForm = () => {
 
   return (
     <FormWrapper onSubmit={handleSubmit}>
-      <input
-        ref={hiddenRef}
-        type="hidden"
-        name="mrrobot"
-        aria-label="Please do not fill in"
-      />
-
-      <AnimatePresence>
-        {isSent ? (
-          <SuccessMsgWrapper>
-            <SuccessEmoji>🎉</SuccessEmoji>
-            <SuccessTitle
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ type: 'spring', damping: 12 }}
-            >
-              {'Your message was successfully sent :)'}
-            </SuccessTitle>
-            <SuccessMsg
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ type: 'spring', damping: 12, delay: 0.2 }}
-            >
-              I will get back to you as soon as possible
-            </SuccessMsg>
-          </SuccessMsgWrapper>
-        ) : (
-          <>
-            {isDesktop ? (
+      <div>
+        <input
+          ref={hiddenRef}
+          type="hidden"
+          name="mrrobot"
+          aria-label="Please do not fill in"
+        />
+        <AnimatePresence>
+          {isSent ? (
+            <SuccessMsgWrapper>
+              <SuccessEmoji>🎉</SuccessEmoji>
+              <SuccessTitle
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ type: 'spring', damping: 12 }}
+              >
+                {'Your message was successfully sent :)'}
+              </SuccessTitle>
+              <SuccessMsg
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ type: 'spring', damping: 12, delay: 0.2 }}
+              >
+                I will get back to you as soon as possible
+              </SuccessMsg>
+            </SuccessMsgWrapper>
+          ) : (
+            <>
+              {isDesktop ? (
+                <InputRow>
+                  <InputFieldWrapper>
+                    <Label htmlFor="name">Name</Label>
+                    <InputField
+                      id="name"
+                      name="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                  </InputFieldWrapper>
+                  <InputFieldWrapper>
+                    <Label htmlFor="email">Email</Label>
+                    <InputField
+                      id="email"
+                      type="email"
+                      name="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </InputFieldWrapper>
+                </InputRow>
+              ) : (
+                <>
+                  <InputFieldWrapper>
+                    <Label htmlFor="name">Name</Label>
+                    <InputField
+                      id="name"
+                      name="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                  </InputFieldWrapper>
+                  <InputFieldWrapper>
+                    <Label htmlFor="email">Email</Label>
+                    <InputField
+                      id="email"
+                      type="email"
+                      name="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </InputFieldWrapper>
+                </>
+              )}
               <InputRow>
                 <InputFieldWrapper>
-                  <Label htmlFor="name">Name</Label>
+                  <Label htmlFor="subject">Subject</Label>
                   <InputField
-                    id="name"
-                    name="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                </InputFieldWrapper>
-                <InputFieldWrapper>
-                  <Label htmlFor="email">Email</Label>
-                  <InputField
-                    id="email"
-                    type="email"
-                    name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    id="subject"
+                    name="subject"
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
                   />
                 </InputFieldWrapper>
               </InputRow>
-            ) : (
-              <>
-                <InputFieldWrapper>
-                  <Label htmlFor="name">Name</Label>
-                  <InputField
-                    id="name"
-                    name="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                </InputFieldWrapper>
-                <InputFieldWrapper>
-                  <Label htmlFor="email">Email</Label>
-                  <InputField
-                    id="email"
-                    type="email"
-                    name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </InputFieldWrapper>
-              </>
-            )}
-            <InputRow>
               <InputFieldWrapper>
-                <Label htmlFor="subject">Subject</Label>
-                <InputField
-                  id="subject"
-                  name="subject"
-                  value={subject}
-                  onChange={(e) => setSubject(e.target.value)}
+                <Label htmlFor="message">Message</Label>
+                <TextareaField
+                  id="message"
+                  name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 />
               </InputFieldWrapper>
-            </InputRow>
-            <InputFieldWrapper>
-              <Label htmlFor="message">Message</Label>
-              <TextareaField
-                id="message"
-                name="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              />
-            </InputFieldWrapper>
 
-            <Button whileHover={{ y: -1 }} whileTap={{ y: 1 }}>
-              {isSending ? (
-                <>Sending...</>
-              ) : (
-                <>
-                  Send <FiSend style={{ marginLeft: 5 }} />
-                </>
-              )}
-            </Button>
-          </>
-        )}
-      </AnimatePresence>
-      <AnimatePresence>
-        {errors && (
-          <ErrMsg
-            initial={{ opacity: 0, x: '-50%', y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-          >
-            <FiAlertTriangle style={{ marginRight: 7 }} />
-            {errors}
-          </ErrMsg>
-        )}
-      </AnimatePresence>
+              <Button whileHover={{ y: -1 }} whileTap={{ y: 1 }}>
+                {isSending ? (
+                  <>Sending...</>
+                ) : (
+                  <>
+                    Send <FiSend style={{ marginLeft: 5 }} />
+                  </>
+                )}
+              </Button>
+            </>
+          )}
+        </AnimatePresence>
+        <AnimatePresence>
+          {errors && (
+            <ErrMsg
+              initial={{ opacity: 0, x: '-50%', y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+            >
+              <FiAlertTriangle style={{ marginRight: 7 }} />
+              {errors}
+            </ErrMsg>
+          )}
+        </AnimatePresence>
+      </div>
+      <div>
+        <Dog3D src="/images/dog-3d2.png" alt="Dog" />
+      </div>
     </FormWrapper>
   )
 }
@@ -193,17 +197,17 @@ export default ContactForm
 
 // Styles
 const FormWrapper = styled.form`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  gap: 6rem;
   position: relative;
-  max-width: 75%;
   z-index: 3000;
 
   @media (max-width: 500px) {
     padding: 0;
     max-width: 100%;
+    grid-template-columns: 1fr;
   }
 `
 
@@ -317,4 +321,12 @@ const SuccessEmoji = styled.span`
   font-size: 5rem;
   display: block;
   margin-bottom: 2rem;
+`
+
+const Dog3D = styled.img`
+  max-width: 95%;
+
+  @media (min-width: 1024px) {
+    max-width: 100%;
+  }
 `

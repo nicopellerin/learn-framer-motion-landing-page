@@ -1,11 +1,15 @@
 import * as React from 'react'
-import { useState } from 'react'
+import { useState, FC } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { FaExclamationCircle, FaDiscord } from 'react-icons/fa'
 import { Circle } from 'better-react-spinkit'
 
-const SignupForm = () => {
+interface Props {
+  ref: any
+}
+
+const SignupForm: FC<Props> = ({ ref }) => {
   const [email, setEmail] = useState('')
   const [isSending, setIsSending] = useState(false)
   const [errMessage, setErrMessage] = useState('')
@@ -54,6 +58,7 @@ const SignupForm = () => {
           placeholder="Your email"
           value={email}
           onChange={(e) => setEmail(e.currentTarget.value)}
+          ref={ref}
         />
         <Button
           whileHover={{ y: isSending ? 0 : -1 }}
@@ -104,20 +109,24 @@ const Wrapper = styled(motion.div)`
   justify-content: center;
   flex-direction: column;
   padding: 5rem 2rem 8rem;
-  background: url('/images/bg.jpg');
+  background: linear-gradient(
+      118.58deg,
+      rgba(187, 107, 217, 0.1) 26.34%,
+      rgba(97, 218, 251, 0.1) 90.6%
+    ),
+    url('/images/bg-darker.jpg');
   background-size: cover;
   margin: 6rem -2rem 4rem;
   scroll-margin-top: 25em;
-  box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.2);
-  border-top: 2px solid #f4f4f4;
-  border-bottom: 2px solid #f4f4f4;
-  box-shadow: 0 0 35px 10px rgba(89, 86, 213, 0.5);
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  box-shadow: 0 0 10px 3px rgba(89, 86, 213, 0.3);
 
   @media (min-width: 450px) {
     border-radius: 0.5rem;
     padding: 5rem 0rem 7rem;
     scroll-margin-top: 30em;
-    border: 2px solid #f4f4f4;
+    border: 4px solid #000;
     margin: 6rem 0rem 4rem;
   }
 `
@@ -167,17 +176,14 @@ const Input = styled.input`
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   width: 100%;
-  border: 1px solid #bb6bd9;
+  border: 1px solid rgba(187, 107, 217, 0.5);
+  box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.2);
   color: pink;
-  background: #333;
+  background: #112;
   outline: none;
 
   &::placeholder {
-    color: pink;
-  }
-
-  @media (min-width: 450px) {
-    font-size: 2rem;
+    color: rgba(255, 192, 203, 0.9);
   }
 `
 
