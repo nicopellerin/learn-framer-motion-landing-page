@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const LoopLogo = () => (
   <LogoWrapper>
     <Loop
-      src="/images/loop.png"
+      src="/images/loop2.png"
       initial={{ y: '-50%', x: '-50%' }}
       alt="Loop"
     />
