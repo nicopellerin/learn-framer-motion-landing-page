@@ -25,7 +25,7 @@ const Wrapper = styled.footer`
 `
 
 const Container = styled.div`
-  padding: 0rem 3rem 5rem;
+  padding: 3rem;
   font-size: 1.6rem;
   font-weight: 500;
   text-align: center;

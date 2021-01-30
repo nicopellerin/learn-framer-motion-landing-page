@@ -27,7 +27,7 @@ export default Wave
 const Wrapper = styled(motion.svg)`
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   z-index: 101;
   pointer-events: none;
 `
