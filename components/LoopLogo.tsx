@@ -12,16 +12,19 @@ const LoopLogo = () => (
         alt="Loop"
       />
     </picture>
-    <Logo
-      src="/images/react-logo.png"
-      animate={{ y: [0, 3, 0], rotate: [3, 0, -3] }}
-      alt="React logo"
-      transition={{
-        duration: 4,
-        repeat: Infinity,
-        repeatType: 'reverse',
-      }}
-    />
+    <picture>
+      <source srcSet="/images/react-logo.webp" type="image/webp" />
+      <Logo
+        src="/images/react-logo.png"
+        animate={{ y: [0, 3, 0], rotate: [3, 0, -3] }}
+        alt="React logo"
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          repeatType: 'reverse',
+        }}
+      />
+    </picture>
   </LogoWrapper>
 )
 
