@@ -112,7 +112,7 @@ const Wrapper = styled(motion.div)`
       rgba(187, 107, 217, 0.1) 26.34%,
       rgba(97, 218, 251, 0.1) 90.6%
     ),
-    url('/images/bg-darker.jpg');
+    url('/images/bg-darker.webp');
   background-size: cover;
   margin: 6rem -2rem 4rem;
   scroll-margin-top: 25em;
