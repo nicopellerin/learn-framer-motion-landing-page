@@ -56,7 +56,7 @@ const Wrapper = styled(motion.div)`
     padding: 1.8rem 1.6rem;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
-    box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.2);
+    box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.15);
     border: 1px solid #ccc;
     border-left: none;
   }

@@ -85,12 +85,17 @@ const Tagline = styled.h3`
 `
 
 const StyledA = styled.a`
-  color: #333;
+  color: rebeccapurple;
 `
 
 const Twit = styled.span`
-  color: #1da1f2;
-  font-weight: 700;
+  color: #0aa1f0;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.5rem;
+  line-height: 1;
+  /* border: 1px solid rgba(10, 161, 240, 0.3); */
 `
