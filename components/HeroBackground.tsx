@@ -148,24 +148,28 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
           initial={{ y: 500 }}
           animate={{ y: 0 }}
           transition={{ type: 'spring', damping: 20, delay: 0.7 }}
+          alt="Man 1"
         />
         <WomanOne
           src="/images/black_girl_3d.png"
           initial={{ y: 500 }}
           animate={{ y: 0 }}
           transition={{ type: 'spring', damping: 20, delay: 0.9 }}
+          alt="Woman 1"
         />
         <ManTwo
           src="/images/black_man_3d-2.png"
           initial={{ y: 500 }}
           animate={{ y: 0 }}
           transition={{ type: 'spring', damping: 20, delay: 1.1 }}
+          alt="Man 2"
         />
         <WomanTwo
           src="/images/white_girl_3d.png"
           initial={{ y: 500 }}
           animate={{ y: 0 }}
           transition={{ type: 'spring', damping: 20, delay: 1.3 }}
+          alt="Woman 2"
         />
       </Wrapper>
       <AnimatePresence>

@@ -12,6 +12,7 @@ const LoopLogo = () => (
     <Logo
       src="/images/react-logo.png"
       animate={{ y: [0, 3, 0], rotate: [3, 0, -3] }}
+      alt="React logo"
       transition={{
         duration: 4,
         repeat: Infinity,
