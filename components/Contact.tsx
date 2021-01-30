@@ -89,11 +89,11 @@ const StyledA = styled.a`
 `
 
 const Twit = styled.span`
-  color: #f4f4f4;
+  color: #112;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
-  background: #0aa1f0;
+  background: rgba(10, 161, 240, 0.1);
   padding: 0.45rem 0.75rem;
   border-radius: 0.5rem;
   line-height: 1;
