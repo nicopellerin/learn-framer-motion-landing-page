@@ -49,7 +49,10 @@ const SignupForm = () => {
         <Discount>60% off promo code</Discount> when the course is released! 🎉
       </Tagline>
       <StyledForm onSubmit={handleSubscribe}>
+        <Label htmlFor="email">Email</Label>
         <Input
+          id="email"
+          name="email"
           type="email"
           placeholder="Your email"
           value={email}
@@ -161,6 +164,11 @@ const StyledForm = styled.form`
   max-width: 40rem;
   margin: 0 auto;
   position: relative;
+`
+
+const Label = styled.label`
+  position: absolute;
+  left: -9999px;
 `
 
 const Input = styled.input`

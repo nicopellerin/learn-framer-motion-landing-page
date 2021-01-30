@@ -32,5 +32,6 @@ const Container = styled.div`
 `
 
 const Astyled = styled.a`
-  color: #bb6bd9;
+  color: rebeccapurple;
+  font-weight: 600;
 `

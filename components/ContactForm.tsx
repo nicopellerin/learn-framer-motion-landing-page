@@ -238,7 +238,7 @@ const Label = styled.label`
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #bb6bd9;
+  color: rebeccapurple;
 `
 
 const InputField = styled.input`
