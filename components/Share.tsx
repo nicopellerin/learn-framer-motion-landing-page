@@ -53,7 +53,7 @@ const Wrapper = styled(motion.div)`
     top: 50%;
     transform: translateY(-50%);
     background: rgba(255, 255, 255, 0.1);
-    padding: 1.4rem 1.6rem;
+    padding: 1.8rem 1.6rem;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     box-shadow: 0 0 15px 3px rgba(89, 86, 213, 0.2);
@@ -102,4 +102,34 @@ const ShareText = styled.span`
   font-weight: 600;
   color: #555;
   margin-bottom: 1.2rem;
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 1px;
+    height: 7px;
+    background: #aaa;
+    position: absolute;
+    left: 27px;
+    bottom: -7px;
+    transform: rotate(45deg);
+  }
+
+  &:before {
+    content: '';
+    width: 1px;
+    height: 7px;
+    background: #aaa;
+    position: absolute;
+    right: 27px;
+    bottom: -7px;
+    transform: rotate(-45deg);
+  }
+
+  @media (min-width: 768px) {
+    &:after,
+    &:before {
+      display: none;
+    }
+  }
 `
