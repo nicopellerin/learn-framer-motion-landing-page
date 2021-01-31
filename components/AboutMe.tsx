@@ -8,7 +8,10 @@ const AboutMe = () => {
       <Container>
         <Title>About me &mdash;</Title>
         <Info>
-          <Me src="/images/me.jpg" alt="Nico Pellerin" />
+          <picture>
+            <source srcSet="/images/me.webp" type="image/webp" />
+            <Me src="/images/me.jpg" alt="Nico Pellerin" />
+          </picture>
           <div>
             <Welcome>Hi! I'm Nico &#128400; </Welcome>
             <Text>
