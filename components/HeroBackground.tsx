@@ -204,12 +204,14 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: url('/images/bg-mobile.webp');
+  background: url('/images/bg.webp');
   background-size: cover;
   background-position-y: center;
 
   @media (min-width: 768px) {
     background: url('/images/bg.jpg');
+    background-size: cover;
+    background-position-y: center;
   }
 `
 
