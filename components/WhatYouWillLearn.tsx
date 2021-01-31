@@ -17,7 +17,7 @@ const WhatYouWillLearn = () => {
           Before taking this course, please make sure that you are at least
           familiar with the basics of{' '}
           <ReactText>
-            React <FaReact style={{ marginLeft: 5 }} />
+            React <FaReact style={{ marginLeft: 3 }} />
           </ReactText>
           . To learn more, you can visit{' '}
           <StyledA href="https://reactjs.org/" target="_blank" rel="noopener">
