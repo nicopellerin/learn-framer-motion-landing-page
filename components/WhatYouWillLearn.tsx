@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import { FaReact } from 'react-icons/fa'
 
 import SignupForm from './SignupForm'
 import AboutMe from './AboutMe'
@@ -12,6 +13,31 @@ const WhatYouWillLearn = () => {
       <AboutMe />
       <Container id="what-you-will-learn">
         <Title>What you will learn &mdash;</Title>
+        <Text>
+          Before taking this course, please make sure that you are at least
+          familiar with the basics of{' '}
+          <ReactText>
+            React{' '}
+            <motion.span
+              style={{ margin: '0 5px', transformOrigin: 'center center' }}
+              animate={{ rotate: 360 }}
+              transition={{
+                type: 'tween',
+                duration: 5,
+                repeat: Infinity,
+                repeatType: 'loop',
+                ease: 'linear',
+              }}
+            >
+              <FaReact style={{ fontSize: '2rem' }} />
+            </motion.span>
+          </ReactText>
+          . To learn more, you can visit{' '}
+          <StyledA href="https://reactjs.org/" target="_blank" rel="noopener">
+            reactjs.org
+          </StyledA>
+          .
+        </Text>
         <Text>
           In this course, we will be creating{' '}
           <strong>2 website projects</strong> (including a{' '}
@@ -154,4 +180,14 @@ const DonutWrapper = styled.div`
 const Donut = styled.img`
   text-align: center;
   margin: 1rem 0 3rem 0;
+`
+
+const StyledA = styled.a`
+  color: #f6deff;
+`
+
+const ReactText = styled.span`
+  display: inline-flex;
+  align-items: center;
+  color: #61dafb;
 `
