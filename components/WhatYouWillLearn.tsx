@@ -17,20 +17,7 @@ const WhatYouWillLearn = () => {
           Before taking this course, please make sure that you are at least
           familiar with the basics of{' '}
           <ReactText>
-            React{' '}
-            <motion.span
-              style={{ margin: '0 5px', transformOrigin: 'center center' }}
-              animate={{ rotate: 360 }}
-              transition={{
-                type: 'tween',
-                duration: 5,
-                repeat: Infinity,
-                repeatType: 'loop',
-                ease: 'linear',
-              }}
-            >
-              <FaReact style={{ fontSize: '2rem' }} />
-            </motion.span>
+            React <FaReact style={{ marginLeft: 5 }} />
           </ReactText>
           . To learn more, you can visit{' '}
           <StyledA href="https://reactjs.org/" target="_blank" rel="noopener">
