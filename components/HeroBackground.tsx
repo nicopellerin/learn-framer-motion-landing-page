@@ -204,7 +204,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: url('/images/bg.webp');
+  background: url('/images/bg-mobile.webp');
   background-size: cover;
   background-position-y: center;
 
