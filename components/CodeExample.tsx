@@ -71,6 +71,7 @@ const CodeContainer = styled(motion.div)`
   overflow: hidden;
   width: 30rem;
   margin: 0 auto 6rem;
+  overflow: hidden;
 `
 
 const Avatar = styled(motion.img)`
@@ -92,4 +93,5 @@ const CodeAvatar = styled.div`
   margin: 0 auto 3rem;
   box-shadow: 0px 3px 3px 3px rgba(155, 81, 224, 0.26);
   border: 3px solid rgba(155, 81, 224, 0.62);
+  z-index: 10;
 `
