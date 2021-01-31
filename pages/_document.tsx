@@ -31,7 +31,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head crossOrigin="anonymous">
+        <Head>
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
           <meta
@@ -91,7 +91,7 @@ export default class MyDocument extends Document {
         </Head>
         <body>
           <Main />
-          <NextScript crossOrigin="anonymous" />
+          <NextScript />
         </body>
       </Html>
     )

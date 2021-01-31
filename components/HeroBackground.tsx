@@ -4,10 +4,12 @@ import { AnimatePresence, motion } from 'framer-motion'
 // import { FaTv } from 'react-icons/fa'
 
 import LoopLogo from './LoopLogo'
-import DropdownMobile from './DropdownMobile'
 import Overlay from './Overlay'
 import VideoPlayer from './VideoPlayer'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
+
+const DropdownMobile = dynamic(() => import('./DropdownMobile'), { ssr: false })
 
 interface Props {
   toggleDropdown: boolean
