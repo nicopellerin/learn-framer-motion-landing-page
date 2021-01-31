@@ -1,10 +1,19 @@
 import * as React from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
+import useMedia from 'use-media'
+import { FaCode } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 import CodeExample from './CodeExample'
 import Code from './Code'
+import CodeNote from './CodeNote'
 
 const CodeBlock = () => {
+  const isWide = useMedia({ minWidth: '768px' })
+
+  const [showCode, setShowCode] = useState(false)
+
   return (
     <ExampleContainer>
       <ExampleTitle>Code example &mdash;</ExampleTitle>
@@ -20,35 +29,29 @@ const CodeBlock = () => {
         library and makes it quite easy to make beautiful animations without
         much extra code.
       </Text>
-      <Code />
-      <NoteContainer>
-        <NoteText>
-          <strong>Note:</strong> If you are not familiar with the syntax above,
-          it's using <TextSpan>styled-components</TextSpan> for the styling. You
-          can learn more about it{' '}
-          <StyledA
-            href="http://styled-components.com/"
-            target="_blank"
-            rel="noopener"
+      {isWide ? (
+        <>
+          <Code />
+          <CodeNote />
+        </>
+      ) : (
+        <>
+          <ButtonCode
+            onClick={() => setShowCode((prevState) => !prevState)}
+            whileHover={{ y: -1 }}
+            whileTap={{ y: 1 }}
           >
-            here
-          </StyledA>
-          .
-        </NoteText>
-        <NoteText>
-          {' '}
-          To use Framer Motion with CSS/Sass/inline-styles, you use the
-          following syntax for a div:{' '}
-          <TextSpan
-            style={{ color: '#61dafb' }}
-          >{`<motion.div className={someClass}>
-            {code}
-          </motion.div>
-          `}</TextSpan>
-          . If you are confused, don't worry, as I will teach you how all of
-          this works! {':)'}
-        </NoteText>
-      </NoteContainer>
+            {showCode ? 'Hide' : 'View'} code{' '}
+            <FaCode style={{ marginLeft: 5 }} />
+          </ButtonCode>
+          {showCode ? (
+            <>
+              <Code />
+              <CodeNote />
+            </>
+          ) : null}
+        </>
+      )}
     </ExampleContainer>
   )
 }
@@ -79,21 +82,19 @@ const TextSpan = styled.span`
   color: pink;
 `
 
-const StyledA = styled.a`
-  color: pink;
-`
-
-const NoteContainer = styled.div`
-  background: #112;
-  padding: 0.2rem 2rem;
+const ButtonCode = styled(motion.button)`
+  outline: none;
+  padding: 1.4rem 2rem;
   border-radius: 0.5rem;
-  margin-top: 3rem;
-  border: 1px solid pink;
-`
-
-const NoteText = styled.p`
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 1.6;
-  color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  background: linear-gradient(146.82deg, #bb6bd9 68%, #bb6bd0 89.83%);
+  color: #eef;
+  margin: 3rem 0;
+  width: 100%;
+  box-shadow: 0px 3px 3px 3px rgba(155, 81, 224, 0.26);
+  border: 3px solid rgba(155, 81, 224, 0.62);
 `
