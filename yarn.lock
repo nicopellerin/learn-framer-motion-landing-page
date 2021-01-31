@@ -196,6 +196,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
   integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
 
+"@fontsource/inter@^4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.1.1.tgz#d94fa4c49163932525f0fb9232f7c85c5eec897a"
+  integrity sha512-T42ST8vzd5wJYzwKstP9VUM6QV3WRBAKKDmwQYg/GjKMAtg8ioN2UhffclRq6e6tUkgMwtDWkhAPc5wqgS5gzw==
+
 "@fontsource/space-grotesk@^4.1.0":
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/@fontsource/space-grotesk/-/space-grotesk-4.1.1.tgz#7f7817c704c4fd28e28878bde051d0dc1cdacdaa"
@@ -4421,11 +4426,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-typeface-inter@^3.15.1:
-  version "3.15.1"
-  resolved "https://registry.yarnpkg.com/typeface-inter/-/typeface-inter-3.15.1.tgz#bbd39cc26ed1c7b3a2bc797996a9d053b507e727"
-  integrity sha512-xlEvjfaTvFnr3ZmwM6fs5/KOKLpAuNksAUxiYfa6dKqZham2oTGm0gI1j/tcgxh1reihhrKbTFfFjtCV9wwxXA==
 
 typescript@4.0:
   version "4.0.5"
