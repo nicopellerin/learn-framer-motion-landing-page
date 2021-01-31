@@ -1,21 +1,12 @@
 import * as React from 'react'
-// import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-// import Prism from 'prismjs'
 
 import SignupForm from './SignupForm'
 import AboutMe from './AboutMe'
-
-// const code = ``.trim()
+import CodeBlock from './CodeBlock'
 
 const WhatYouWillLearn = () => {
-  // useEffect(() => {
-  //   const idx = setTimeout(() => Prism.highlightAll(), 0)
-
-  //   return () => clearTimeout(idx)
-  // }, [])
-
   return (
     <Wrapper>
       <AboutMe />
@@ -48,26 +39,10 @@ const WhatYouWillLearn = () => {
             <strong>and many more!</strong>
           </ListItem>
         </List>
-        {/* <ExampleContainer>
-          <ExampleTitle>
-            <span
-              style={{
-                background: '#f6def0',
-                padding: '0.2rem 1rem',
-                borderRadius: '0.5rem',
-                fontWeight: 600,
-                border: '2px dashed rgba(0,0,0,0.3)',
-                color: '#112',
-              }}
-            >
-              Code example:
-            </span>{' '}
-            Animated card
-          </ExampleTitle>
-          <pre className="line-numbers">
-            <code className="language-jsx">{code}</code>
-          </pre>
-        </ExampleContainer> */}
+        <CodeBlock />
+        <DonutWrapper>
+          <Donut src="/images/donut.png" alt="donut" />
+        </DonutWrapper>
         <Text>
           This course will also teach you how to make use of scrolling
           animations to build <strong>Parallax</strong> effects and
@@ -170,12 +145,13 @@ const Wave = styled(motion.svg)`
   }
 `
 
-// const ExampleContainer = styled.div`
-//   margin-bottom: 4rem;
-// `
+const DonutWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`
 
-// const ExampleTitle = styled.pre`
-//   font-size: 4rem;
-//   color: #112;
-//   margin-bottom: 4rem;
-// `
+const Donut = styled.img`
+  text-align: center;
+  margin: 1rem 0 3rem 0;
+`

@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 
 import Bar from '../components/Bar'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import HeroBackground from '../components/HeroBackground'
-import Navbar from '../components/Navbar'
 import NavbarMobile from '../components/NavbarMobile'
 import Wave from '../components/Wave'
 import WhatYouWillLearn from '../components/WhatYouWillLearn'
+
+const Navbar = dynamic(() => import('../components/Navbar'))
 
 const IndexPage = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false)
