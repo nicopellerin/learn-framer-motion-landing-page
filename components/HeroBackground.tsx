@@ -8,6 +8,7 @@ import Overlay from './Overlay'
 import VideoPlayer from './VideoPlayer'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import Wave from './Wave'
 
 const DropdownMobile = dynamic(() => import('./DropdownMobile'), { ssr: false })
 
@@ -177,6 +178,7 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
             alt="Woman 2"
           />
         </picture>
+        <Wave />
       </Wrapper>
       <AnimatePresence>
         {toggleDropdown && (

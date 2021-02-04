@@ -7,7 +7,6 @@ import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import HeroBackground from '../components/HeroBackground'
 import NavbarMobile from '../components/NavbarMobile'
-import Wave from '../components/Wave'
 import WhatYouWillLearn from '../components/WhatYouWillLearn'
 
 const Navbar = dynamic(() => import('../components/Navbar'))
@@ -25,7 +24,6 @@ const IndexPage = () => {
         toggleDropdown={toggleDropdown}
         setToggleDropdown={setToggleDropdown}
       />
-      <Wave />
       <Bar />
       <WhatYouWillLearn />
       <Contact />
