@@ -167,7 +167,10 @@ const DonutWrapper = styled.div`
 const Donut = styled.img`
   text-align: center;
   margin: 1rem 0 3rem 0;
-  max-width: 12rem;
+  width: 13rem;
+  height: 11rem;
+  /* width: 100%; */
+  /* height: auto; */
 `
 
 const StyledA = styled.a`
