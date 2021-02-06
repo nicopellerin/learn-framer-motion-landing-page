@@ -56,6 +56,14 @@ const WhatYouWillLearn = () => {
         <DonutWrapper>
           <Donut src="/images/donut.png" alt="donut" />
         </DonutWrapper>
+        <VideoWrapper>
+          <Video
+            src="https://www.youtube.com/embed/n3H-KdSa6I0?controls=0"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></Video>
+        </VideoWrapper>
         <Text>
           This course will also teach you how to make use of scrolling
           animations to build <strong>Parallax</strong> effects and
@@ -169,8 +177,6 @@ const Donut = styled.img`
   margin: 1rem 0 3rem 0;
   width: 13rem;
   height: 11rem;
-  /* width: 100%; */
-  /* height: auto; */
 `
 
 const StyledA = styled.a`
@@ -181,4 +187,25 @@ const ReactText = styled.span`
   display: inline-flex;
   align-items: center;
   color: #61dafb;
+`
+
+const VideoWrapper = styled.figure`
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+`
+
+const Video = styled.iframe`
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 `

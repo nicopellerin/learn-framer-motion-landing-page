@@ -25,8 +25,8 @@ const Navbar = () => {
         <MenuList onMouseLeave={() => setIndex(null)}>
           <AnimateSharedLayout>
             {links.map(({ text, link }, i) => (
-              <MenuListItem onMouseOver={() => setIndex(i)}>
-                <Link href={link} key={link}>
+              <MenuListItem key={link} onMouseOver={() => setIndex(i)}>
+                <Link href={link}>
                   <StyledLink>
                     {text}
                     {index === i && (
