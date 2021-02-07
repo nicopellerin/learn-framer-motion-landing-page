@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { FaReact } from 'react-icons/fa'
+import { FaReact, FaArrowUp } from 'react-icons/fa'
 
 import SignupForm from './SignupForm'
 import AboutMe from './AboutMe'
@@ -64,6 +64,11 @@ const WhatYouWillLearn = () => {
             allowFullScreen
           ></Video>
         </VideoWrapper>
+        <VideoText>
+          <FaArrowUp style={{ marginRight: 7 }} />
+          Preview of the <strong>Portfolio project</strong> we will be building
+          in this course (No audio)
+        </VideoText>
         <Text>
           This course will also teach you how to make use of scrolling
           animations to build <strong>Parallax</strong> effects and
@@ -197,7 +202,7 @@ const VideoWrapper = styled.figure`
   overflow: hidden;
   margin: 0;
   margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 `
 
 const Video = styled.iframe`
@@ -208,4 +213,11 @@ const Video = styled.iframe`
   left: 0;
   width: 100%;
   height: 100%;
+`
+
+const VideoText = styled.span`
+  display: block;
+  color: #f6deff;
+  margin-bottom: 4rem;
+  font-size: 1.4rem;
 `
