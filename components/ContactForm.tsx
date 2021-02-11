@@ -6,6 +6,7 @@ import { FiSend, FiAlertTriangle } from 'react-icons/fi'
 import axios from 'axios'
 import { useMedia } from 'react-use-media'
 import Dog from './Dog'
+import { clearTimeout } from 'timers'
 
 const ContactForm = () => {
   const [name, setName] = useState('')
@@ -59,9 +60,11 @@ const ContactForm = () => {
   }
 
   useEffect(() => {
+    let idx: ReturnType<typeof setTimeout>
     if (errors) {
-      setTimeout(() => setErrors(''), 4000)
+      idx = setTimeout(() => setErrors(''), 4000)
     }
+    return () => clearTimeout(idx)
   }, [errors])
 
   return (
