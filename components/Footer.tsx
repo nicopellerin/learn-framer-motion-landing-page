@@ -6,11 +6,11 @@ const Footer = () => (
     <Container>
       &copy; {new Date().getFullYear()}{' '}
       <Astyled
-        href="https://nicopellerin.io"
+        href="https://codingwithnico.com"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Nico Pellerin
+        Coding With Nico
       </Astyled>
       . All rights reserved.
     </Container>

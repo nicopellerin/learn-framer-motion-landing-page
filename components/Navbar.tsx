@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { AnimateSharedLayout, motion } from 'framer-motion'
-import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
+
+import LogoAnim from './LogoAnim'
 
 const links: Link[] = [
   { text: 'About me', link: '#about-me' },
@@ -20,7 +21,7 @@ const Navbar = () => {
 
   return (
     <Wrapper>
-      <Image src="/images/logo_new.svg" alt="Logo" width={190} height={40} />
+      <LogoAnim />
       <Menu>
         <MenuList onMouseLeave={() => setIndex(null)}>
           <AnimateSharedLayout>

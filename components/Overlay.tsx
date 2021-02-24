@@ -11,7 +11,7 @@ interface StyledProps {
   zIndex: number
 }
 
-const Overlay: FC<Props> = ({ setToggleDropdown, zIndex = 100 }) => {
+const Overlay: FC<Props> = ({ setToggleDropdown, zIndex = 49 }) => {
   return (
     <OverlayStyled
       initial={{ opacity: 0 }}
