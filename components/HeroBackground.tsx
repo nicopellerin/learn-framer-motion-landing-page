@@ -9,6 +9,7 @@ import VideoPlayer from './VideoPlayer'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import Wave from './Wave'
+import Parallax from './Parallax'
 
 const DropdownMobile = dynamic(() => import('./DropdownMobile'), { ssr: false })
 
@@ -30,28 +31,29 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
   return (
     <>
       <Wrapper>
-        <Info>
-          <LoopLogo />
-          <Title
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: 'spring', damping: 18, stiffness: 60 }}
-          >
-            Step your animation game up
-          </Title>
-          <Tagline
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: 'spring',
-              damping: 18,
-              stiffness: 60,
-              delay: 0.2,
-            }}
-          >
-            Learn Framer Motion - from beginner to advanced
-          </Tagline>
-          {/* <>
+        <Parallax offset={100} offsetInitial={10}>
+          <Info>
+            <LoopLogo />
+            <Title
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: 'spring', damping: 18, stiffness: 60 }}
+            >
+              Step your animation game up
+            </Title>
+            <Tagline
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                type: 'spring',
+                damping: 18,
+                stiffness: 60,
+                delay: 0.2,
+              }}
+            >
+              Learn Framer Motion - from beginner to advanced
+            </Tagline>
+            {/* <>
               <Button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{
@@ -109,35 +111,36 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
               </WatchVideoButton>
             </> */}
 
-          <Link href="#sign-up">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                type: 'spring',
-                damping: 18,
-                stiffness: 60,
-                delay: 0.5,
-              }}
-            >
-              <div style={{ position: 'relative' }}>
-                <Button whileHover={{ y: -1 }} whileTap={{ y: 1 }}>
-                  Sign up today!
-                </Button>
-                <SavingsWrapper
-                  initial={{ y: -20, x: '-50%', rotateX: 45, opacity: 0 }}
-                  animate={{ y: 0, rotateX: 0, opacity: 1 }}
-                  transition={{ type: 'spring', damping: 20, delay: 2 }}
-                >
-                  <Savings>Get 60% off coupon</Savings>
-                </SavingsWrapper>
-              </div>
-            </motion.span>
-          </Link>
-        </Info>
+            <Link href="#sign-up">
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  type: 'spring',
+                  damping: 18,
+                  stiffness: 60,
+                  delay: 0.5,
+                }}
+              >
+                <div style={{ position: 'relative' }}>
+                  <Button whileHover={{ y: -1 }} whileTap={{ y: 1 }}>
+                    Sign up today!
+                  </Button>
+                  <SavingsWrapper
+                    initial={{ y: -20, x: '-50%', rotateX: 45, opacity: 0 }}
+                    animate={{ y: 0, rotateX: 0, opacity: 1 }}
+                    transition={{ type: 'spring', damping: 20, delay: 2 }}
+                  >
+                    <Savings>Get 60% off coupon</Savings>
+                  </SavingsWrapper>
+                </div>
+              </motion.span>
+            </Link>
+          </Info>
+        </Parallax>
         <picture>
           <source srcSet="/images/white_man_3d.webp" type="image/webp" />
           <ManOne
