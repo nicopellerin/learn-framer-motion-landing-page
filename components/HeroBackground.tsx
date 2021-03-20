@@ -2,6 +2,7 @@ import React, { useState, Dispatch, SetStateAction, FC } from 'react'
 import styled from 'styled-components'
 import { AnimatePresence, motion } from 'framer-motion'
 // import { FaTv } from 'react-icons/fa'
+import { useMedia } from 'react-use-media'
 
 import LoopLogo from './LoopLogo'
 import Overlay from './Overlay'
@@ -28,10 +29,14 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
   //   return () => window.clearTimeout(idx)
   // }, [])
 
+  const isDesktop = useMedia({
+    minWidth: 500,
+  })
+
   return (
     <>
       <Wrapper>
-        <Parallax offset={100} offsetInitial={10}>
+        <Parallax offset={isDesktop ? 100 : 50} offsetInitial={10}>
           <Info>
             <LoopLogo />
             <Title
