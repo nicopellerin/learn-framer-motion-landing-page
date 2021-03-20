@@ -36,7 +36,7 @@ const HeroBackground: FC<Props> = ({ toggleDropdown, setToggleDropdown }) => {
   return (
     <>
       <Wrapper>
-        <Parallax offset={isDesktop ? 100 : 50} offsetInitial={10}>
+        <Parallax offset={isDesktop ? 100 : 60} offsetInitial={10}>
           <Info>
             <LoopLogo />
             <Title
