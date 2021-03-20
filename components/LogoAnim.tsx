@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, memo } from 'react'
 import styled from 'styled-components'
 import { motion, useAnimation } from 'framer-motion'
 
@@ -29,7 +29,7 @@ const LogoAnim = () => {
   )
 }
 
-export default LogoAnim
+export default memo(LogoAnim)
 
 // Styles
 const Logo = styled(motion.img)`
