@@ -60,9 +60,10 @@ const WhatYouWillLearn = () => {
           <Video
             src="https://www.youtube.com/embed/n3H-KdSa6I0?controls=0"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             loading="lazy"
+            title="Demo video"
           ></Video>
         </VideoWrapper>
         <VideoText>
