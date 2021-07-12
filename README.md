@@ -2,4 +2,4 @@
 
 ![website screenshot](learn-framer-motion-landing-page.png)
 
-## Coming soon!
+[https://learnframermotion.com](https://learnframermotion.com)
