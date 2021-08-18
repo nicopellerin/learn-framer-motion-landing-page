@@ -4,9 +4,8 @@ import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiSend, FiAlertTriangle } from 'react-icons/fi'
 import axios from 'axios'
-import { useMedia } from 'react-use-media'
+
 import Dog from './Dog'
-import { clearTimeout } from 'timers'
 
 const ContactForm = () => {
   const [name, setName] = useState('')
@@ -16,10 +15,6 @@ const ContactForm = () => {
   const [isSending, setIsSending] = useState(false)
   const [isSent, setIsSent] = useState(false)
   const [errors, setErrors] = useState('')
-
-  const isDesktop = useMedia({
-    minWidth: 500,
-  })
 
   const hiddenRef = useRef() as React.MutableRefObject<HTMLInputElement>
 
@@ -99,52 +94,28 @@ const ContactForm = () => {
             </SuccessMsgWrapper>
           ) : (
             <>
-              {isDesktop ? (
-                <InputRow>
-                  <InputFieldWrapper>
-                    <Label htmlFor="name">Name</Label>
-                    <InputField
-                      id="name"
-                      name="name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                    />
-                  </InputFieldWrapper>
-                  <InputFieldWrapper>
-                    <Label htmlFor="email">Email</Label>
-                    <InputField
-                      id="email"
-                      type="email"
-                      name="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </InputFieldWrapper>
-                </InputRow>
-              ) : (
-                <>
-                  <InputFieldWrapper>
-                    <Label htmlFor="name">Name</Label>
-                    <InputField
-                      id="name"
-                      name="name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                    />
-                  </InputFieldWrapper>
-                  <InputFieldWrapper>
-                    <Label htmlFor="email">Email</Label>
-                    <InputField
-                      id="email"
-                      type="email"
-                      name="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </InputFieldWrapper>
-                </>
-              )}
               <InputRow>
+                <InputFieldWrapper>
+                  <Label htmlFor="name">Name</Label>
+                  <InputField
+                    id="name"
+                    name="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </InputFieldWrapper>
+                <InputFieldWrapper>
+                  <Label htmlFor="email">Email</Label>
+                  <InputField
+                    id="email"
+                    type="email"
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </InputFieldWrapper>
+              </InputRow>
+              <InputRow style={{ gridTemplateColumns: '1fr' }}>
                 <InputFieldWrapper>
                   <Label htmlFor="subject">Subject</Label>
                   <InputField
@@ -222,6 +193,7 @@ const InputRow = styled.div`
   width: 100%;
 
   @media (max-width: 500px) {
+    grid-gap: 0;
     grid-template-columns: 1fr;
   }
 `
